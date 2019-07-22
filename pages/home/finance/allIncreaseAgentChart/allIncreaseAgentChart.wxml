@@ -1,0 +1,19 @@
+<!--pages/home/finance/allIncreaseAgentChart/allIncreaseAgentChart.wxml-->
+
+<view class="right-item mt100">        
+        <view class="date-box">
+            <image src="../../../../images/chart_left.png" class="date-icon" catchtap="modDate" data-flag="1"></image>
+            <view class="date-str">{{curtYear}}年</view>
+            <image src="../../../../images/chart_right.png" class="date-icon" catchtap="modDate" data-flag="2"></image>
+        </view>
+        <view class="container padding0">
+            <canvas canvas-id="canvas" class="canvas" style="{{'width:' + width + 'px;height:' + height +'px;'}}"></canvas>
+        </view>
+        <view class='chart_view2'>年度新增代理：{{chartData.all_sum}}人</view>
+        <view class='display-flex chart_bottombox'>
+            <view wx:for="{{chartData.list}}" wx:key="this" class="tooltip">
+                <view class='chart_color' style="background-color:rgb({{item.color.r}},{{item.color.g}},{{item.color.b}})"></view>
+                <view class='chart_text'>{{item.title}}</view>
+            </view>
+        </view>    
+</view>

@@ -1,0 +1,161 @@
+<!--pages/home/home.wxml-->
+<image class='rtop_img' src='../../images/home/home/home_bg.png'></image>
+<view class='position_a rtopbox'>
+  <view class='overf'>
+    <view class='fl'>
+      <view class='rtop_yue1'>可提现余额 （元）</view>
+      <view class='rtop_yue2'>￥{{availableprice}}</view>
+    </view>
+    <view class='fr rtop_mxbox' bindtap='tz_financeDetails'>
+      查看明细
+      <image src='../../images/arrow_right_fff.png' class='rarrow_img'></image>
+    </view>
+  </view>
+  <view class='rtop_bottombox display-flex'>
+    <view class='rtop_bottom_smbox' bindtap='tz_increase' data-tabarr='0'>
+      <view class='rtop_bottom_money'>￥{{m_shouyi_sum}}</view>
+      <view class='rtop_bottom_text'>本月累计收入</view>
+    </view>
+    <view class='rtop_bottom_smbox' bindtap='tz_increase' data-tabarr='1'>
+      <view class='rtop_bottom_money'>{{m_user_count}}</view>
+      <view class='rtop_bottom_text'>本月新增会员</view>
+    </view>
+    <view class='rtop_bottom_smbox' bindtap='tz_increase' data-tabarr='2'>
+      <view class='rtop_bottom_money'>{{m_agent_count}}</view>
+      <view class='rtop_bottom_text'>本月新增代理</view>
+    </view>
+  </view>
+</view>
+
+<view class='overf newsbox'>
+  <image src='../../images/home/content/new_header.png' class='fl new_header'></image>
+  <swiper class="swiper_container fl" vertical="true" autoplay="true" circular="true" interval="2000">
+    <block wx:for="{{msgList}}" wx:key>
+       <view bindtap='tz_webview' data-src='{{item.href}}' data-newsid='{{item.id}}'>
+        <swiper-item>
+          <view class="swiper_item">{{item.name}}</view>
+        </swiper-item>
+      </view> 
+      
+    </block>
+  </swiper>
+</view>
+<view class='rcenter_box'>
+  <block wx:if="{{agentinfoshow==1}}">
+    <view wx:if="{{agentinfoshow_num==4}}"  class='overf ritem_box' bindtap='showStudent'>
+      <image src='../../images/home/home/home_img1.png' class='rcenter_img fl'></image>
+      <view class='fl'>
+        <view class='rcenter_text1'>会员信息</view>
+        <view class='rcenter_text2'>区域内全部会员信息</view>
+      </view>
+      <image src='../../images/arrow_right_666.png' class='fr rcenter_arrow'></image>
+    </view>
+    <view wx:else  class='overf ritem_box' bindtap='tz_agentInfo'>
+      <image src='../../images/home/home/home_img1.png' class='rcenter_img fl'></image>
+      <view class='fl'>
+        <view class='rcenter_text1'>代理信息</view>
+        <view class='rcenter_text2'>区域内全部代理及会员信息</view>
+      </view>
+      <image src='../../images/arrow_right_666.png' class='fr rcenter_arrow'></image>
+    </view>
+  </block>
+  <view wx:else></view>
+  <view class='overf ritem_box' bindtap='tz_directAgency'>
+    <image src='../../images/home/home/home_img2.png' class='rcenter_img fl'></image>
+    <view class='fl'>
+      <view class='rcenter_text1'>直属代理</view>
+      <view class='rcenter_text2'>{{directinfo}}</view>
+    </view>
+    <image src='../../images/arrow_right_666.png' class='fr rcenter_arrow'></image>
+  </view>
+  <view class='overf ritem_box border_n' bindtap='tz_directmember'>
+    <image src='../../images/home/home/home_img3.png' class='rcenter_img fl'></image>
+    <view class='fl'>
+      <view class='rcenter_text1'>直属会员</view>
+      <view class='rcenter_text2'>直属会员信息</view>
+    </view>
+    <image src='../../images/arrow_right_666.png' class='fr rcenter_arrow'></image>
+  </view> 
+</view>
+
+
+
+
+
+
+
+
+<!-- <view class='finance_box'>
+  <view class='finance_top1'>当前收益（元）</view>
+  <view class='finance_top2'>{{yuenum}}</view>
+  <view class='finance_top3' bindtap='tz_financeDetails'>查看明细</view>
+</view>
+<view class='finance_box2'>
+  <view class='finance_center1'>
+    <view class='finance_h1'>今日总收益（元）</view>
+    <view class='finance_h2'>{{list.todayzongshouyi}}</view>
+  </view>
+  <view class='finance_center2'>
+    <view class='finance_h1'>今日会员收益（元）</view>
+    <view class='finance_h2'>{{list.todaystudentshouyi}}</view>
+  </view>
+  <view class='finance_center3'>
+    <view class='finance_h1'>今日代理收益（元）</view>
+    <view class='finance_h2'>{{list.todaydailishouyi}}</view>
+  </view>
+</view>
+<view class='finance_box3 mb1' bindtap='tz_financeAdd'>
+  <view class='finance_add1'>今日新增会员</view>
+  <view class='finance_add2'>{{list.studentcount}}</view>
+  <view class='finance_add3'>
+    查看详情
+    <image src='../../../images/home/arrow_right.png' class='arrow_right'></image>
+  </view>
+</view>
+<view class='finance_box3 mb2' bindtap='tz_financeAddAgent'>
+  <view class='finance_add1'>今日新增代理</view>
+  <view class='finance_add2'>{{list.dailicount}}</view>
+  <view class='finance_add3'>   
+    查看详情
+    <image src='../../../images/home/arrow_right.png' class='arrow_right'></image>
+  </view>
+</view>
+<view class='finance_box4' bindtap='finance_help'>
+  <view>使用帮助</view>
+  <image src='../../../images/home/arrow_right.png' class='arrow_right2'></image>
+</view>
+<view class='new_pb'>
+<view class='finance_box4 ' bindtap='tz_customerService'>
+  <view>联系咨询</view>
+  <image src='../../../images/home/arrow_right.png' class='arrow_right2'></image>
+</view>
+</view>
+<view class='btn_cash' bindtap='tz_cash' data-yue="{{yuenum}}">提取现金</view> -->
+ 
+
+
+
+
+
+
+
+
+
+<!-- <view class='home_box'>
+	<view class='home_content border_r' bindtap='tz_agentInfo'>
+		<image src='../../images/home/home_img1.png'></image>
+		<view>代理信息</view>
+	</view>
+	<view class='home_content' bindtap='tz_directAgency'>
+		<image src='../../images/home/home_img2.png'></image>
+		<view>直属代理</view>
+	</view>
+	<view class='home_content border_r' bindtap='tz_directMember'>
+		<image src='../../images/home/home_img3.png'></image>
+		<view>直属会员</view>
+	</view>
+	<view class='home_content' bindtap='tz_finance'>
+		<image src='../../images/home/home_img4.png'></image>
+		<view>财务报表</view>
+	</view>
+</view> -->

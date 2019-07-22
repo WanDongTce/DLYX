@@ -1,0 +1,58 @@
+<!--pages/user/cash/applyCash/applyCash.wxml-->
+<view class='box'>
+  <view class='box1 overf'>
+    <view class='fl box1_text1'>到账银行卡</view>    
+    <picker  bindchange="bindPickerChange" value="{{index}}" range="{{array}}"  >       
+      <view class="picker">
+        {{array[index]}}
+      </view>         
+    </picker>
+  </view>
+  <view class='box2'>
+    <view class='box2_text'>提现金额</view>
+    <view class='box2_inputbox'>
+      <view class='box2_inputbox_text fl'>￥</view>
+      <input class='input fl'  placeholder-class='placeholderClass'  name="txje" bindinput="txje" type='digit' value='{{txje}}'></input>
+      <view class='clr'></view>
+    </view>
+    <view class='box2_bottom'>当前可提现余额￥{{price}}，<text catchtap='allcash'>全部提现</text></view>
+  </view>
+</view>
+<view class='btn' bindtap='pay'>提交</view>
+
+
+
+
+<!--输入钱包密码-->
+    <view  class="wallets-password" wx:if="{{wallets_password_flag}}">
+      
+
+      <view class="input-content-wrap">   
+        <view class='tc_close' bindtap="close_wallets_password">x</view>
+        <view class='tc_title'>请输入提现密码</view>
+        <view class='tc_title2'>提现金额{{txje}}元</view>             
+        <view catchtap="set_Focus" class="input-password-wrap">
+          <view class="password_dot">
+            <i wx:if="{{wallets_password.length>=1}}"></i>
+          </view>
+          <view class="password_dot">
+            <i wx:if="{{wallets_password.length>=2}}"></i>
+          </view>
+          <view class="password_dot">
+            <i wx:if="{{wallets_password.length>=3}}"></i>
+          </view>
+          <view class="password_dot">
+            <i wx:if="{{wallets_password.length>=4}}"></i>
+          </view>
+          <view class="password_dot">
+            <i wx:if="{{wallets_password.length>=5}}"></i>
+          </view>
+          <view class="password_dot">
+            <i wx:if="{{wallets_password.length>=6}}"></i>
+          </view>
+        </view>
+        <view class='newforgetp' bindtap='newforgetp'>忘记密码？</view>
+      </view>
+      <input bindinput="set_wallets_password" class="input-content" password type="number" focus="{{isFocus}}" maxlength="6" cursor-spacing ='0'/>
+
+    </view>

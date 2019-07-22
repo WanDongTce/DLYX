@@ -1,0 +1,45 @@
+/* pages/home/finance/financeDetails/withdrawDetail/withdrawDetail.wxss */
+page{
+  background-color:#f4f4f4;
+}
+.bigbox{
+  padding:0 24rpx;
+  background-color:#fff;
+}
+.top_box{
+  border-bottom:1rpx solid #dfdfdf;
+  line-height:144rpx;
+  justify-content: space-between;
+}
+.top_left{
+  font-size:32rpx;
+  color:#888;
+}
+.top_right{
+  font-size:40rpx;
+  color:#ED1B1A;
+}
+.item_box{
+  margin-top:35rpx;
+}
+.item{
+  line-height:70rpx;
+  justify-content: space-between;
+}
+.item_left{
+  font-size:28rpx;
+  color:#888;
+}
+.item_right{
+  font-size:30rpx;
+  color:#333;
+  text-align: right;
+  width:480rpx;white-space:nowrap; overflow:hidden;text-overflow:ellipsis;
+}
+.item_ml_2{
+  margin-left:56rpx;
+}
+.item_ml_3{
+  margin-left:14rpx;
+  margin-right:14rpx;
+}

@@ -1,0 +1,79 @@
+/* pages/question/questionChoice/questionChoice.wxss */
+page{
+  background-color:#fff;
+}
+.top_box{background-color:#338fe4;height:100rpx; position: fixed;top:0;width:100%;z-index: 11;display: flex;display: -webkit-flex;border-top:2rpx solid #2774c3;}
+.input_box{border-radius: 27rpx;margin-left:90rpx;width:466rpx;}
+.top_box input{background-color:#fff;font-size:26rpx;color:#2e2e2e;padding-left:26rpx;line-height:54rpx;height:54rpx;border-radius: 27rpx;margin-top:23rpx;padding-right:90rpx;}
+.place_holder{font-size:26rpx;color:#8a8a8a;}
+.search_img{width:42rpx;height:42rpx; margin-left:74rpx;margin-top:25rpx;position: fixed;right:220rpx;top:6rpx;}
+.choice_text{color:#fff;font-size:36rpx;display:inline-block;position: fixed;right:44rpx;top:30rpx;} 
+
+
+
+
+
+
+.itembox{height:110rpx;border-bottom:1px solid #dfdfdf;margin:0 0rpx;box-sizing: border-box;}
+
+.circle_image{width:30rpx;height:30rpx;margin:40rpx 30rpx 0 0;}
+.item_img{width:78rpx;height:78rpx;border-radius:39rpx;vertical-align:middle;margin-top:16rpx;margin-left:30rpx;}
+.item_name{font-size:30rpx;line-height:110rpx;margin-left:23rpx;width:190rpx;overflow: hidden;white-space:nowrap;text-overflow: ellipsis;color:#383838;}
+.item_grade{font-size:28rpx;line-height:110rpx;margin-left:40rpx;}
+
+.bottombox{ position: fixed;bottom:0;height:86rpx;line-height: 86rpx;font-size:34rpx;color:#fff;background-color:#ED1B1A;text-align: center;width:100%;}
+
+
+/*新搜索  */
+.rsearch_box{
+  background-color: #f4f4f4;
+  padding:20rpx 0rpx;
+  position: fixed;top:0;width:100%;z-index: 11;
+  border-bottom:1rpx solid #dedede;
+}
+.rsearch_smbox{
+  width:80%;
+  background-color:#fff;
+  height:60rpx;
+  line-height: 60rpx;
+  font-size:26rpx;
+  border-radius: 10rpx;
+  margin-left:10%;
+  border:1rpx solid #dfdfdf;
+}
+.rsearch_imgbox{
+  width:12%;
+  text-align: center;
+}
+.rsearch_imgbox image{
+  display: block;
+  width:29rpx;
+  height:29rpx;
+  margin:15.5rpx auto 0;
+ 
+}
+.rsearch_input{
+  width:88%;
+}
+.placeholder{
+  color:#9a9a9a;
+}
+.rsearch_input{
+  height:60rpx;
+  line-height: 60rpx;
+  font-size:26rpx;
+  color:#9a9a9a;
+}
+.rtop_box{
+  background-color:#fff;
+  width:100%;
+  height:86rpx;
+  line-height:86rpx;
+  margin-bottom:16rpx;
+}
+.rsearch_sx{
+  color:#9a9a9a;
+  font-size:28rpx;
+  line-height:60rpx;
+  margin-right:40rpx;
+}

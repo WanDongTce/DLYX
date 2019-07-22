@@ -1,0 +1,16 @@
+/* pages/home/directAgency/directAgencyXydlSchool/directAgencySchool.wxss */
+@import "/pages/home/directAgency/directAgencyXydl/directAgencyXydl.wxss";
+
+
+.rtop_text{
+  font-size:28rpx;
+  color:#444;
+  margin-left:30rpx;
+}
+.rtop_imgbox{
+  margin-right:30rpx;
+  margin-top:36rpx;
+}
+.w25{
+  width:25%;
+}

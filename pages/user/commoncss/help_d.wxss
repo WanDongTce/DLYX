@@ -1,0 +1,11 @@
+.fl{float:left;}
+.fr{float:right;}
+page{background-color:#fff;}
+.help_item{background-color:#fff;border-bottom:1px solid #efefef;}
+.help_item_pl{color:#0d0d0d;margin-top:16rpx;margin-bottom:16rpx;font-size:32rpx;font-weight:bold;line-height:50rpx;}
+.explain_box{margin-top:18rpx;margin-bottom:18rpx;}
+.explain{color:#0d0d0d;font-size:30rpx;line-height:48rpx;text-indent: 60rpx;}
+image{width:100%;}
+.see1{color:#0d0d0d;font-size:30rpx;font-weight:bold;margin-bottom:9rpx;}
+.see2{color:#0d0d0d;font-size:30rpx;font-weight:bold;margin-bottom:9rpx;margin-top:25rpx;}
+.mt_newhelp{margin-top:40rpx;}

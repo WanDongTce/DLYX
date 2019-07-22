@@ -1,0 +1,21 @@
+<!--pages/user/customerService/customerService.wxml-->
+<image src='../../../images/user/kefu_banner.png'></image>
+<!-- <view class='overfbox'>
+  <view class='flbox'>
+    <view class='lx_view1'>客服电话：024-79298139</view>
+    <view class='lx_view2'>服务时间（9：00-21：00）</view>
+  </view>
+  <view class='frbox'>
+    <image src='../../../images/user/kefu_phone.png' class='kefu_phone' bindtap='kf_view1'></image>
+  </view>
+</view>
+<view class='lx_view3'>联系邮箱：ajihua@pp11.cn</view> -->
+<view class='lx_view4' bindtap='kf_view1'>
+  <text>●</text>客服热线：024-66909606
+</view>
+<!-- <view class='lx_view4' bindtap='kf_view2'>
+  <text>●</text>联系电话：024-75168888
+</view> -->
+<!-- <view class='lx_view4'>
+  <text>●</text>客服QQ：4564983
+</view> -->

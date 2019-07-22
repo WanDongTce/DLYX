@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "问题详情",
+  "usingComponents": {
+    "empty": "/pages/component/empty/empty",
+    "addAgre": "/pages/component/addAgree/addAgree",
+    "fullImg": "/pages/component/fullImg/fullImg"
+  }
+}

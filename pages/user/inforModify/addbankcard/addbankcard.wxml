@@ -1,0 +1,23 @@
+<!--pages/user/inforModify/addbankcard/addbankcard.wxml-->
+<form bindsubmit="bindFormSubmit">
+<!-- <view class='display-flex top'>
+  <view class='left'>选择银行卡</view>
+  <picker  bindchange="bindPickerChange" value="{{index}}" range="{{array}}" class="zcfx_box3 overf" > 
+      
+      <text class='newpicker fl '>{{array[index]}}</text>
+         
+  </picker>
+</view> -->
+
+<view class='display-flex center border'>
+  <view class='left'>银行卡号</view>
+  <input type='number' class='input' placeholder='请输入银行卡号' placeholder-class='placeholder' confirm-type="next" cursor-spacing="90" bindinput="inputEvent" value='{{xfmc_show}}' name="xfmc_show"></input>
+</view>
+
+<view class='display-flex center'>
+  <view class='left'>持卡人姓名</view>
+  <input type='text' class='input' placeholder='请输入持卡人姓名' placeholder-class='placeholder' confirm-type="done" value='{{xfmc_name}}' cursor-spacing="90" bindinput="inputName" name="xfmc_name"></input>
+</view>
+
+<button class='add_btn' formType="submit">添加</button>
+</form>

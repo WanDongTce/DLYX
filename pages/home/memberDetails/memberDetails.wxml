@@ -1,0 +1,112 @@
+<!--pages/home/memberDetails/memberDetails.wxml-->
+
+<image src='../../../images/home/content/member_bg.png' class='rtop_img'></image>
+<view class=' rtop_view overf'>
+  <image wx:if="{{list.avatar==''}}" class='header fl' src='../../../images/user/headPortrait.png'></image>
+  <image wx:else class='header fl' src='{{list.avatar}}'></image>
+  <view class='fl'>
+    <view class='top_text1'>
+      {{list.realname}}<text>{{list.grade_name}}{{list.class_name}}</text>
+    </view>
+    <view class='top_text2'>{{list.school_name}}
+    </view>
+  </view>
+  <view class='fr text-align-right'>
+    <view class='top_right1'>{{list.userlevel}}</view>
+    <!-- <view class='top_right2'>注册时间：{{list.create_time}}</view> -->
+  </view>
+  <view class='clr'></view>
+  <view class='top_right2'>注册时间：{{list.create_time}}</view>
+</view>
+
+
+
+
+
+<view class="tab-left" bindtap="tabFun"> 
+  
+    <view class="tab-left_view {{tabArr.curHdIndex=='0'? 'active' : ''}}" id="tab-hd01" data-id="0">    
+      <view id="tab-hd01" data-id="0" class="{{tabArr.curHdIndex=='0'? 'active2' : ''}}">会员信息</view>
+      <view wx:if="{{tabArr.curHdIndex=='0'}}" class="tabline_box">
+        <image src='../../../images/home/content/tabline.png' class='tabline'></image>
+      </view>
+    </view> 
+  
+  
+    <view class="tab-left_view {{tabArr.curHdIndex=='1'? 'active' : ''}}" id="tab-hd02" data-id="1">
+    
+      <view class="{{tabArr.curHdIndex=='1'? 'active2' : ''}}" id="tab-hd02" data-id="1">TA的问题</view>
+      <view wx:if="{{tabArr.curHdIndex=='1'}}" class="tabline_box">
+        <image src='../../../images/home/content/tabline.png' class='tabline'></image>
+      </view>
+    </view> 
+
+    <view class="tab-left_view {{tabArr.curHdIndex=='2'? 'active' : ''}}" id="tab-hd03" data-id="2">
+    
+      <view id="tab-hd03" data-id="2" class="{{tabArr.curHdIndex=='2'? 'active2' : ''}}">充值记录</view>
+      <view wx:if="{{tabArr.curHdIndex=='2'}}" class="tabline_box">
+        <image src='../../../images/home/content/tabline.png' class='tabline'></image>
+      </view>
+    </view>
+  
+</view> 
+ 
+<view class="tab-right"> 
+  <view class="right-item {{tabArr.curBdIndex=='0'? 'active' : ''}}">
+    <view class='member_xinxi display-flex pt23'>
+      <view class='member_xinxi_text1'>所属代理</view>
+      <view class='member_xinxi_text2'>{{agentname}}</view>
+    </view> 
+    <view class='member_xinxi display-flex'>
+      <view class='member_xinxi_text1'>到期时间</view>
+      <view class='member_xinxi_text2'>{{list.vip_expire}}</view>
+    </view> 
+    <view class='member_xinxi display-flex'>
+      <view class='member_xinxi_text1'>家长姓名</view>
+      <view class='member_xinxi_text2'>{{list.parent_name}}</view>
+    </view>
+    <view class='member_xinxi display-flex'>
+      <view class='member_xinxi_text1'>家长注册时间</view>
+      <view class='member_xinxi_text2'>{{list.parent_ctime}}</view>
+    </view>
+    <view class='member_xinxi_fakabox'><view class='member_xinxi_faka' bindtap='faka'>给TA发卡</view></view>
+  </view> 
+  <view class="right-item {{tabArr.curBdIndex=='1'? 'active' : ''}}">
+    <block wx:for="{{listQuestion}}" wx:key="this">
+      <view class='member_wentibox'>
+        <view class='member_wenti_top overf'>
+          <!-- <image src='../../../images/home/content/gold.png' class='gold_img fl'></image>
+          <view class='member_wenti_num fl'>{{item.}}</view> -->
+          <view class='member_wenti_title fl'>{{item.name}}</view>
+        </view>
+        <scroll-view class="scroll-box" scroll-x="true">
+          <block wx:for="{{item.image}}" wx:key='this'>
+            <image src='{{item.url}}' class='member_wenti_img' mode='aspectFill'></image>
+          </block>
+        </scroll-view>
+        <view class='member_wenti_center display-flex'>
+          <view>{{item.grade.name}}<text>{{item.subject.name}}</text></view>
+          <view>回答<text>{{item.answernum}}</text></view>
+        </view>
+        <view class='member_wenti_bottom fr'>
+          <view class='member_wenti_bottom1' catchtap='bangta' data-myid="{{item.id}}" data-title="{{item.name}}">帮TA解答</view>
+          <view class='member_wenti_bottom2' data-questionid="{{item.id}}"  catchtap='findpeople'>找人解答</view>
+        </view>
+        <view class='clr'></view>
+      </view>
+    </block>
+  </view> 
+  <view class="right-item {{tabArr.curBdIndex=='2'? 'active' : ''}}">
+    <block wx:for="{{record}}" wx:key>
+      <view class='member_cz_box overf'>
+        <view class='fl '>
+          <view class='member_cz_text1'>{{item.title}}</view>
+          <view class='member_cz_text2'>{{item.create_time}}</view>
+        </view>
+        <view class='member_cz_text3 fr'>{{item.price}}</view>
+      </view>
+    </block>
+    
+  </view> 
+
+</view> 

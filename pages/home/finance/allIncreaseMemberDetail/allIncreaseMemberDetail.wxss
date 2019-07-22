@@ -1,0 +1,5 @@
+/* pages/home/finance/allIncreaseMemberDetail/allIncreaseMemberDetail.wxss */
+@import "/pages/home/finance/financeDetails/withdrawDetail/withdrawDetail.wxss";
+.item_box{
+  margin-top:0;
+}

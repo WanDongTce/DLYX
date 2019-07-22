@@ -1,0 +1,48 @@
+/* pages/user/inforModify/bankcard/bankcard.wxss */
+page{border-top:1rpx solid #dfdfdf;color:#333;background-color:#f4f4f4;
+  padding-bottom:96rpx;
+}
+.item_bigbox{padding:40rpx 24rpx 28rpx;background-color:#fff;margin-top:16rpx;}
+
+.item_topbox{height:60rpx;}
+.name{font-size:30rpx;color:#333;margin-right:27rpx;line-height:60rpx;display: inline-block;}
+.moren{height:38rpx;font-size:24rpx;background-color:#4b94ee;color:#fff;border-radius:10rpx;text-align: center;display: inline-block;width:90rpx;line-height:38rpx;}
+.phone{font-size:30rpx;color:#333;line-height:60rpx;}
+
+.item_bottom {padding-top:20rpx;border-top:1rpx solid #dfdfdf;}
+.item_bottom text{font-size:26rpx;line-height:28rpx;display: inline-block;}
+.moren_img{width:29rpx;height:28rpx;margin-right:12rpx; vertical-align:middle;}
+.edit_img,.del_img{width:28rpx;height:28rpx;margin-right:11rpx; vertical-align:middle;}
+.del_img{margin-left:31rpx;}
+
+.conform_btn{background-color: #48b947;color:#fff;height:98rpx;line-height:98rpx;font-size:30rpx;text-align: center;position:fixed;bottom:0;width:100%;}
+.add_bigbox{background-color:#fff;width:100%;padding:20rpx 0 20rpx;
+  position:fixed;bottom:0;
+}
+.add_box{font-size:30rpx;color:#f63233;line-height: 40rpx;margin:0 auto;width:183rpx;}
+.add_img{width:19rpx;height:19rpx;margin-right:12rpx;vertical-align: middle;}
+
+.fr_dis{display:inline-block;}
+
+.card_img{
+  width:70rpx;
+  height:70rpx;
+  margin-right:20rpx;
+}
+.card_text1{
+  color:#333;
+  font-size:28rpx;
+}
+.card_text2{
+  color:#999;
+  font-size:28rpx;
+  margin-left:58rpx;
+}
+.card_text3{
+  color:#999;
+  font-size:24rpx;
+  margin-top:33rpx;
+}
+.cardbox{
+  padding-bottom:43rpx;
+}

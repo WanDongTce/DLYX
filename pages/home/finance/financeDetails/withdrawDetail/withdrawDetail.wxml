@@ -1,0 +1,33 @@
+<!--pages/home/finance/financeDetails/withdrawDetail/withdrawDetail.wxml-->
+<view class='bigbox'>
+  <view class='top_box display-flex'>
+    <view class='top_left'>余额提现</view>
+    <view class='top_right'>1000</view>
+  </view>
+  <view class='item_box'>
+    <view class='item display-flex'>
+      <view class='item_left'>类<text class='item_ml_2'>型</text></view>
+      <view class='item_right'>类型</view>
+    </view>
+    <view class='item display-flex'>
+      <view class='item_left'>时<text class='item_ml_2'>间</text></view>
+      <view class='item_right'>类型</view>
+    </view>
+    <view class='item display-flex'>
+      <view class='item_left'>持<text class='item_ml_3'>卡</text>人</view>
+      <view class='item_right'>类型</view>
+    </view>
+    <view class='item display-flex'>
+      <view class='item_left'>所属银行</view>
+      <view class='item_right'>类型</view>
+    </view>
+    <view class='item display-flex'>
+      <view class='item_left'>银行卡号</view>
+      <view class='item_right'>类型</view>
+    </view>
+    <view class='item display-flex'>
+      <view class='item_left'>余<text class='item_ml_2'>额</text></view>
+      <view class='item_right'>类型</view>
+    </view>
+  </view>
+</view>

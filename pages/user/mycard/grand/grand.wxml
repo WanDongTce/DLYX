@@ -1,0 +1,36 @@
+<view class="search_bigbox">
+  <view class='search_box overf'>
+    <image src='../../../../images/user/card_search.png' ></image>
+    <input placeholder='搜索' placeholder-class='placeholder' bindinput="bindKeyInput" bindconfirm="bindconfirm" confirm-type='search'></input>    
+  </view>
+</view>
+
+<view class='pot'>a</view>
+<view style="padding-bottom:110rpx;">  
+  <block wx:for="{{list}}" wx:key='this'>
+    <view class="item_bigbox">
+      <view class='itembox '  bindtap="selectClick" id="{{index}}" >
+        <view class='namebox '>
+          <image wx:if="{{item.avatar==''}}" src='../../../../images/user/headPortrait.png'></image>
+          <image wx:else src='{{item.avatar}}'></image>
+          {{item.realname}}
+        </view>
+        <view  wx:if="{{item.selectImage==true}}">  
+          <image src="../../../../images/user/person_choice.png" class="preson_choice"></image>  
+        </view>
+        <view wx:else>
+          <image src="../../../../images/user/person_no_choice.png" class="preson_choice"></image>  
+        </view> 
+      </view>
+    </view>
+  </block>
+</view>
+<!-- </scroll-view> -->
+
+
+
+
+<!-- </view> -->
+<view class='bottombox'>
+  <view class='bottom_btn' bindtap='qr_btn'>确认</view>
+</view>

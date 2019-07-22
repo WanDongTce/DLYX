@@ -1,0 +1,73 @@
+<!--pages/home/finance/financeDetails/financeDetails.wxml-->
+<!-- <view class="{{open ? 'c-state3' : ''}}"> -->
+<view class='top_box'>
+  
+  <view class=' top_inline2' bindtap='tap_ch'>
+    <image src='../../../../images/home/content/filter.png'></image>
+    筛选
+  </view>
+</view>
+<view class='newmt'>
+  <view class='member_cz_box overf' bindtap='tz_withdrawDetail'>
+    <view class='fl '>
+      <view class='member_cz_text1'>余额提现</view>
+      <view class='member_cz_text2'>2018-01-01</view>
+    </view>
+    <view class='member_cz_text3 fr'>199.00</view>
+  </view>
+  <view class='member_cz_box overf' bindtap='tz_incomeDetail'>
+    <view class='fl '>
+      <view class='member_cz_text1'>会员收益-新增会员</view>
+      <view class='member_cz_text2'>2018-01-01</view>
+    </view>
+    <view class='member_cz_text3 fr'>199.00</view>
+  </view> 
+</view>
+  <!-- <view bindtap='tap_ch'>筛选</view> -->
+<!-- </view> -->
+
+
+<!--遮罩-->
+<view  class="sidebar_mask" hidden="{{!open}}" bindtap="tap_ch">
+</view>
+<view class="sidebar_box' {{open ? 'c-state1' : ''}}">
+  <view class='sidebar_top'>筛选</view>
+  <view class='sidebar_smbox'>
+    <view class='sidebar_title'>时间</view>
+    <view class='sidebar_picker_box display-flex'>
+      <picker mode="date" value="{{date}}" start="" end="{{currentdate}}" bindchange="bindDateChange" class='sidebar_picker_smbox'>
+        <view class="sidebar_picker">
+          {{date}}
+          <image src='../../../../images/sort_down.png' class='sidebar_picker_img'></image> 
+        </view>
+      </picker>
+       <view class='sidebar_picker_center'>-</view> 
+      <picker mode="date" value="{{date2}}" start="" end="{{currentdate}}" bindchange="bindDateChange2" class='sidebar_picker_smbox'>
+        <view class="sidebar_picker">
+          {{date2}}
+          <image src='../../../../images/sort_down.png' class='sidebar_picker_img'></image> 
+        </view>
+      </picker>
+    </view>
+    <view class='sidebar_title'>收益类型</view>    
+    <view class='slidebar_style_box overf'>
+      <view class="slidebar_style_item fl {{incometypeid==item.id?'incometypebg1':'incometypebg2'}}" wx:for="{{incometype}}" wx:key bindtap='incometype' data-incometypeid="{{item.id}}">{{item.name}}</view>     
+    </view>
+    <view class='sidebar_title'>推荐人</view>
+    <view class='sidebar_input_box'>
+      <input placeholder='请输入推荐人姓名' placeholder-class='sidebar_input_placeholder' bindinput="bindinput" value="{{inputrefereeinput}}"></input>
+    </view> 
+  </view>
+  <view class='sidebar_bottom_box'>
+    <view class='sidebar_bottom overf'>
+      <view class='sidebar_bottom_left fl' bindtap='reset'>重置</view>
+      <view class='sidebar_bottom_right fl' bindtap='sure'>确定</view>
+    </view>
+  </view>
+</view>
+
+
+
+
+
+

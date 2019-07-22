@@ -1,0 +1,24 @@
+<!--pages/question/answer/answer.wxml-->
+<view class='view_box'>
+  {{title}}
+</view>
+<view class='textarea_box'>
+   <textarea placeholder='添加回答内容~~~' cursor-spacing="120" placeholder-class='placeholder' maxlength="500" bindinput="saveContent"></textarea> 
+</view>
+
+<view wx:if="{{vidSrc}}" wx:key="this" class='video_box'>
+    <video src="{{vidSrc}}" class="video"></video>
+</view>
+<view class="imgs">
+  <!-- <scroll-view class="scroll-box" scroll-x="true"> -->
+        <view class="scroll-item" wx:for="{{imgList}}" wx:key="this" wx:for-index="idx">
+            <image src="{{item.file_url}}" class="hmwk-img"></image>
+                <image src="../../../images/del.png" class="del-img" catchtap="delImg" data-idx="{{idx}}"></image> 
+        </view>
+  <!-- </scroll-view> -->
+</view>
+<view class='btn_box'>
+  <!-- <image src='../../../images/video_green.png' class='add_video' bindtap='add_video'></image> -->
+  <image src='../../../images/pic.png' class='add_pic' bindtap="addImg" wx:if="{{imgList.length == 0}}"></image>
+</view>
+<view class="btn-box" catchtap="submit">提交</view>

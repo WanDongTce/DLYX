@@ -1,0 +1,16 @@
+<!--pages/home/agentInfo/agentInfoItemSelect/agentInfoItemSelect.wxml-->
+<view bindtap='tz_qyxj' class='rdirect_box display-flex'>
+  <view class='rdirect_left'>区域下级代理</view>
+  <view class='rdirect_right'>
+    {{nextname}}：{{nexttotal}}
+    <image src='../../../../images/arrow_right_grey.png' class='rdirect_arrow'></image>
+  </view>
+</view>
+<view bindtap='tz_xyjm' class='rdirect_box display-flex' >
+  <view class='rdirect_left'>区域校园加盟商</view>
+  <view class='rdirect_right'>
+    校园加盟商：{{xyjmtotal}}
+    <image src='../../../../images/arrow_right_grey.png' class='rdirect_arrow'></image>
+  </view>
+</view>
+

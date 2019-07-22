@@ -1,0 +1,65 @@
+<!--pages/home/finance/allIncome/allIncome.wxml-->
+<view class='top_box'>
+  <navigator class=' top_inline' url='/pages/home/finance/allIncreaseMemberChart/allIncreaseMemberChart'>
+    <image src='../../../../images/home/content/chart.png'></image>
+    图表
+  </navigator>
+  <view class=' top_inline' bindtap='tap_ch'>
+    <image src='../../../../images/home/content/filter.png'></image>
+    筛选
+  </view>
+</view>
+
+<view class='newmt'>
+  <block wx:for="{{listXzhy}}" wx:key>
+  <view class='member_cz_box overf' bindtap='tz_detail' data-refereename='{{item.referee_name}}' data-username='{{item.user_name}}' data-createtime='{{item.create_time}}' data-userschool='{{item.user_school}}' data-agenttype='{{item.agent_type}}'>
+    <view class='fl '>
+      <view class='member_cz_text1'>会员姓名：{{item.user_name}}</view>
+      <view class='member_cz_text2'>{{item.create_time}}</view>
+    </view>
+    <view class='member_cz_text4 fr'>推荐人：{{item.referee_name}}</view>
+  </view>
+  </block>
+</view>
+  <!-- <view bindtap='tap_ch'>筛选</view> -->
+<!-- </view> -->
+
+
+<!--遮罩-->
+<view  class="sidebar_mask" hidden="{{!open}}" bindtap="tap_ch">
+</view>
+<view class="sidebar_box' {{open ? 'c-state1' : ''}}">
+  <view class='sidebar_top'>筛选</view>
+  <view class='sidebar_smbox'>
+    <view class='sidebar_title'>时间</view>
+    <view class='sidebar_picker_box display-flex'>
+      <picker mode="date" value="{{date}}" start="" end="{{currentdate}}" bindchange="bindDateChange" class='sidebar_picker_smbox'>
+        <view class="sidebar_picker">
+          {{date}}
+          <image src='../../../../images/sort_down.png' class='sidebar_picker_img'></image> 
+        </view>
+      </picker>
+       <view class='sidebar_picker_center'>-</view> 
+      <picker mode="date" value="{{date2}}" start="" end="{{currentdate}}" bindchange="bindDateChange2" class='sidebar_picker_smbox'>
+        <view class="sidebar_picker">
+          {{date2}}
+          <image src='../../../../images/sort_down.png' class='sidebar_picker_img'></image> 
+        </view>
+      </picker>
+    </view>
+    <view class='sidebar_title'>所在学校</view>
+    <view class='sidebar_input_box'>
+      <input placeholder='请输入学校名称' placeholder-class='sidebar_input_placeholder' bindinput="bindinputschool" value="{{inputschool}}"></input>
+    </view> 
+    <view class='sidebar_title'>推荐人</view>
+    <view class='sidebar_input_box'>
+      <input placeholder='请输入推荐人姓名' placeholder-class='sidebar_input_placeholder' bindinput="bindinput" value="{{inputrefereeinput}}"></input>
+    </view> 
+  </view>
+  <view class='sidebar_bottom_box'>
+    <view class='sidebar_bottom overf'>
+      <view class='sidebar_bottom_left fl' bindtap='reset'>重置</view>
+      <view class='sidebar_bottom_right fl' bindtap='sure'>确定</view>
+    </view>
+  </view>
+</view>

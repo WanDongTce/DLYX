@@ -1,0 +1,6 @@
+{
+    "navigationBarTitleText": " ",
+    "usingComponents": {
+        "addressPicker": "/pages/component/addressPicker/addressPicker"
+    }
+}

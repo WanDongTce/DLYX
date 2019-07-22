@@ -1,0 +1,35 @@
+<!--pages/news/news.wxml-->
+<block wx:if="{{showEmpty}}">
+  <empty></empty>
+</block>
+<block wx:for="{{list}}" wx:key="this">
+<view class='itembox overf'   bindtap='tz_webview'  data-src='{{item.href}}' data-newsid='{{item.id}}'>
+  <view class='item_imgbox fl position-relative'>
+    <image src='{{item.image}}' class='item_img'></image>              
+  </view>
+  <view class='fl item_textbox'>
+    <view class='item_title'>{{item.name}}</view>
+    <view class='item_numbox display-flex'>
+      <image src='../../images/agr.png' class='item_agrimg '></image>
+      <view class=' item_num'>{{item.agreenum}}</view>
+      <image src='../../images/msg.png' class='item_msgimg '></image>
+      <view class=' item_num'>{{item.commentnum}}</view>       
+    </view>
+  </view>
+</view>
+</block>
+
+<!-- <view class='itembox overf'  data-myid="{{item.Id}}" bindtap='tz_detail'>
+  <view class='item_imgbox fl position-relative'>
+    <image src='../../images/test.png' class='item_img'></image>              
+  </view>
+  <view class='fl item_textbox'>
+    <view class='item_title'>标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题标题</view>
+    <view class='item_numbox display-flex'>
+      <image src='../../images/agr.png' class='item_agrimg '></image>
+      <view class=' item_num'>100</view>
+      <image src='../../images/msg.png' class='item_msgimg '></image>
+      <view class=' item_num'>100</view>       
+    </view>
+  </view>
+</view> -->

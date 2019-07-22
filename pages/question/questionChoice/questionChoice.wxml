@@ -1,0 +1,42 @@
+<!--pages/question/questionChoice/questionChoice.wxml-->
+<!-- <view class="top_box">
+  <view class='input_box'>
+    <input placeholder="请输入搜索姓名" placeholder-class='place_holder' bindinput="keyword"/>
+    <image src='../../../images/question/search.png' class='search_img' bindtap='top_imgsearch' ></image>
+  </view>
+  <view class='choice_text' catchtap='turn_selectbox'>筛选</view>
+</view> -->
+
+<view class='rsearch_box overf' >
+  <view class='rsearch_smbox fl'>
+    <view class='fl rsearch_imgbox'><image src='../../../images/search_9a.png'></image></view>
+    <input class='rsearch_input' placeholder='搜索关键字' placeholder-class='placeholder' bindinput="keyword" confirm-type="search" bindconfirm="top_imgsearch"></input>
+    <view class='clr'></view>
+  </view> 
+</view>
+
+<scroll-view scroll-y="true" style="height: {{scrollHeight}}px;margin-top:100rpx;" bindscrolltolower="loadMore">
+  
+
+   <block wx:for="{{list}}" wx:key > 
+    <view class='overf itembox' bindtap='choice' data-id='{{index}}'>     
+      <image wx:if="{{item.avatar==''}}" src='../../../images/user/headPortrait.png' class='item_img fl'></image>
+      <image wx:else src='{{item.avatar}}' class='item_img fl'></image>
+      <view class='item_name fl c_2e2e2e'>{{item.realname}}</view>
+      <view class='fr'>
+        <view wx:if="{{item.checked== true}}">
+            <image src='../../../images/question/circle_b.png' class='circle_image'></image>
+          </view>
+        <view wx:elif="{{item.checked == false}}">
+            <image src='../../../images/question/circle_g.png' class='circle_image'></image>
+          </view>
+        <view wx:else>
+          <image src='../../../images/question/circle_g.png' class='circle_image'></image>
+        </view>
+      </view> 
+    </view>
+   </block> 
+</scroll-view>
+
+
+<view class='bottombox' bindtap='btn_sure'>确定</view>

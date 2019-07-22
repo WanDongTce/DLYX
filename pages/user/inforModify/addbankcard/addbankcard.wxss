@@ -1,0 +1,47 @@
+/* pages/user/inforModify/addbankcard/addbankcard.wxss */
+page{
+  background-color:#f4f4f4;
+}
+.top{
+  margin-bottom:16rpx;
+  background-color:#fff;
+  line-height:100rpx;
+  justify-content: space-between;
+  align-items: center;
+  padding:0 24rpx;
+}
+.left{
+  font-size:32rpx;
+  color:#333;
+}
+.center{
+  background-color:#fff;
+  line-height:100rpx;
+  justify-content: space-between;
+  align-items: center;
+  padding:0 24rpx;
+  box-sizing: border-box;
+}
+.input{
+  font-size:32rpx;
+  color:#626262;
+  line-height:100rpx;
+  text-align: right;
+  width:510rpx;
+}
+.placeholder{
+  font-size:32rpx;
+  color:#626262;
+}
+.border{
+  border-bottom:1rpx solid #dfdfdf;
+}
+.add_btn{
+  background-color:#e03c32;
+  width:690rpx;
+  margin:60rpx auto;
+  color:#fff;
+  font-size:32rpx;
+  text-align: center;
+  
+}

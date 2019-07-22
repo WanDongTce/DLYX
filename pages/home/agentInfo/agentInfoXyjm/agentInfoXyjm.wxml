@@ -1,0 +1,102 @@
+<!--pages/home/agentInfo/agentInfo.wxml-->
+<view class='rsearch_box'>
+  <view class='rsearch_smbox overf'>
+    <view class='fl rsearch_imgbox'><image src='../../../../images/search_fff.png'></image></view>
+    <input class='rsearch_input' placeholder='搜索关键字' placeholder-class='placeholder' confirm-type='search' bindinput="keyword" bindconfirm="bindconfirm"></input>
+  </view> 
+</view>
+<view class='rtop_box overf position_fix_center'>
+  <view class='w33 fl' bindtap='sorttype' data-sorttype="{{sorttype}}">
+    <view class="rtop_text fl {{sorttype>0?'r_red_text':''}}">代理类别</view>
+    <view class='fr rtop_imgbox' wx:if="{{sorttype==0}}">      
+      <image src='../../../../images/sort_up.png' class='sort_img_up sort_img'></image>
+      <image src='../../../../images/sort_down.png' class='sort_img_down sort_img'></image>
+    </view>
+    <view class='fr rtop_imgbox' wx:if="{{sorttype%2==1}}">      
+      <image src='../../../../images/sort_up_c.png' class='sort_img_up sort_img'></image>
+      <image src='../../../../images/sort_down.png' class='sort_img_down sort_img'></image>
+    </view>
+    <view class='fr rtop_imgbox' wx:if="{{sorttype%2==0}}">      
+      <image src='../../../../images/sort_up.png' class='sort_img_up sort_img'></image>
+      <image src='../../../../images/sort_down_c.png' class='sort_img_down sort_img'></image>
+    </view>
+    <view class='clr'></view>
+  </view>
+  <view class='w33 fl'  bindtap='sortqy' data-sortname="{{sortqy}}">
+    <view class="rtop_text fl {{sortqy>0?'r_red_text':''}}">代理区域</view>
+    <view class='fr rtop_imgbox' wx:if="{{sortqy==0}}">      
+      <image src='../../../../images/sort_up.png' class='sort_img_up sort_img'></image>
+      <image src='../../../../images/sort_down.png' class='sort_img_down sort_img'></image>
+    </view>
+    <view class='fr rtop_imgbox' wx:if="{{sortqy%2==1}}">      
+      <image src='../../../../images/sort_up_c.png' class='sort_img_up sort_img'></image>
+      <image src='../../../../images/sort_down.png' class='sort_img_down sort_img'></image>
+    </view>
+    <view class='fr rtop_imgbox' wx:if="{{sortqy%2==0}}">      
+      <image src='../../../../images/sort_up.png' class='sort_img_up sort_img'></image>
+      <image src='../../../../images/sort_down_c.png' class='sort_img_down sort_img'></image>
+    </view>
+    <view class='clr'></view>
+  </view>
+  <view class='w33 fl' bindtap='sortname' data-sortname="{{sortname}}">
+    <view class="rtop_text fl {{sortname>0?'r_red_text':''}}">代理姓名</view>
+    <view class='fr rtop_imgbox' wx:if="{{sortname==0}}">      
+      <image src='../../../../images/sort_up.png' class='sort_img_up sort_img'></image>
+      <image src='../../../../images/sort_down.png' class='sort_img_down sort_img'></image>
+    </view>
+    <view class='fr rtop_imgbox' wx:if="{{sortname%2==1}}">      
+      <image src='../../../../images/sort_up_c.png' class='sort_img_up sort_img'></image>
+      <image src='../../../../images/sort_down.png' class='sort_img_down sort_img'></image>
+    </view>
+    <view class='fr rtop_imgbox' wx:if="{{sortname%2==0}}">      
+      <image src='../../../../images/sort_up.png' class='sort_img_up sort_img'></image>
+      <image src='../../../../images/sort_down_c.png' class='sort_img_down sort_img'></image>
+    </view>
+    <view class='clr'></view>
+  </view>
+</view>
+<view class='fix_bottom'>
+  <!--点击dialog   -->
+  <block wx:for="{{list}}" wx:key>
+    <view class='ritem_box overf' catchtap='name_dialog' data-dlxm="{{item.name}}" data-dljb="{{item.type}}" data-dlqy="{{item.area}}" data-ssdl="{{item.from_name}}" data-zcsj="{{item.reg_time}}"> 
+      <view class='w33 text-align-center fl elip' >{{item.type}}</view>
+      <view class='w33 text-align-center fl elip' >{{item.area}}</view>
+      <view class='w33 text-align-center fl elip'>{{item.name}}</view>
+    </view>
+  </block>
+</view>
+    <!-- detail dialog  -->
+    <view class="detail-dialog-mask" bindtap="hideDialog" wx:if="{{isShowDialog}}"></view>
+    <view animation="{{animationData}}" class="detail-container" wx:if="{{isShowDialog}}">
+        <view class='detail-content border-none'>
+            <view class='rdialog_top'>代理详情</view>
+            <view class='detail-item'>
+                代理姓名：
+                <text class='rdialog_text' >{{dlxm}}</text>
+                
+            </view>			
+            <view class='detail-item'>
+                代理级别：
+                <text class='rdialog_text'> {{dljb}}</text>
+                
+            </view>
+            <view class='detail-item'>
+                代理区域：
+                <text class='rdialog_text' >{{dlqy}}</text>
+                
+            </view>
+            <view class='detail-item'>
+                所属代理：
+                <text class='rdialog_text' >{{ssdl}}</text>
+                
+            </view>
+            <view class='detail-item'>
+                    注册时间：
+                    <text class='rdialog_text' >{{zcsj}}</text>
+                    
+                </view>
+            </view>
+        
+
+    </view>
+    <!--  detail dialog end  -->

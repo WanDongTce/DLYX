@@ -1,0 +1,17 @@
+<!--pages/user/choice_step3/choice_step3.wxml-->
+<view class='box'>
+    <view class='h1'>请选择代理地区</view>
+    <view class='input_box mt70 display-flex justify-content-between ' catchtap="showPicerFn">
+    
+        <view class="picker-text c_333" wx:if="{{address.length > 0}}">
+            {{address[0].name + address[1].name + address[2].name}}</view>
+        <view class="picker-text c_999" wx:else>请选择代理地区</view> 
+        <image class='arrow_right' src='../../../images/login/arrow.png'></image>   
+    
+    </view>
+    
+    <view class='btn mt70' bindtap='clicknext'>下一步</view>
+    
+</view>
+
+<addressPicker wx:if="{{showPicker}}" catch:pikerConfirm="getAddressInfo" catch:pikerCancel="hidePicker"></addressPicker>

@@ -1,0 +1,21 @@
+<!--pages/user/cash/cash.wxml-->
+<view class='top_box'>
+  <view class='top_text1'>可提现余额</view>
+  <view class='fl top_text2'>￥{{availableprice}}</view>
+  <view bindtap='tz_cash' class='fr top_text3'>申请提现<image src='../../../images/user/r_cash.png' class='r_cashimg'></image></view>
+  <view class='clr'></view>
+</view>
+<view class='item_box' wx:for="{{list}}" wx:key="this" >
+  <view class='item_box_b' bindtap='tz_detail' data-cashid="{{item.id}}">
+    <view class='display-flex item_display'>
+      <view class='item_text1'>提现金额</view>
+      <view class='item_text2'>￥{{item.price}}</view>
+    </view>
+    <view class='display-flex item_display2'>
+      <view class='item_text3'>{{item.createdate}}</view>
+      <view class='item_text5' wx:if="{{item.putstatus==1}}">申请中</view>
+      <view class='item_text5' wx:if="{{item.putstatus==2}}">处理中</view>
+      <view class='item_text4' wx:if="{{item.putstatus==3}}">已完成</view>
+    </view>
+  </view>
+</view>

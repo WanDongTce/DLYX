@@ -1,0 +1,79 @@
+
+<view class='rsearch_box overf' >
+  <view class='rsearch_smbox fl'>
+    <view class='fl rsearch_imgbox'><image src='../../images/search_fff.png'></image></view>
+    <input class='rsearch_input' placeholder='搜索关键字' placeholder-class='placeholder' bindinput="keyword" confirm-type="search" bindconfirm="top_imgsearch"></input>
+    <view class='clr'></view>
+  </view> 
+  <view class='fr rsearch_sx' catchtap='turn_selectbox'>筛选</view>
+</view>  
+
+<view class='r_top_mt'>
+ 
+    <view class='r_nodata_box' wx:if="{{count<=0}}">
+      <image src='../../images/nodata.png' class='r_nodata_img' mode="widthFix"></image>
+      <view class='r_nodata_text'>暂时没有数据</view>
+    </view> 
+  
+   
+    <view class='member_wentibox' wx:key wx:for="{{list}}">
+      <view class='overf r_member_wenti_topbox' bindtap='tz_detail' data-questionid="{{item.id}}">
+        <view class=' fl'>
+          <image wx:if="{{item.userInfo.avatar}}" src='{{item.userInfo.avatar}}' class='r_member_wenti_topboxheader fl'></image>
+          <image wx:else src='../../images/user/headPortrait.png' class='r_member_wenti_topboxheader fl'></image>
+          <view class='fl'>
+            <view class='r_member_wenti_topboxtext1'>{{item.userInfo.nickname}}</view>
+            <view class='r_member_wenti_topboxtext2'>{{item.createdate}}</view>
+          </view>
+          <view class='clr'></view>
+        </view>
+        <view wx:if="{{item.userInfo.userlevel==1}}" class='r_member_wenti_topboxtext3 fr'>普通会员</view>
+        <view wx:if="{{item.userInfo.userlevel==2}}" class='r_member_wenti_topboxtext3 fr'>vip会员</view>
+        
+      </view>
+      <view class='r_member_wenti_topboxtext4' bindtap='tz_detail' data-questionid="{{item.id}}">{{item.name}}</view>
+
+
+      <image src='{{item.images[0].url}}' class='qus-img-2' wx:if="{{item.images.length == 1}}" catchtap="showFullImg" data-imgs="{{item.images}}" mode="aspectFill"></image>
+
+      <scroll-view class='img-box-3 img-box' scroll-x="true" wx:if="{{item.images.length == 2}}" catchtap="showFullImg" data-imgs="{{item.images}}">
+          <image src='{{item.url}}' class='qus-img-3' wx:for="{{item.images}}" wx:key="this"></image>
+      </scroll-view>
+
+      <scroll-view class='img-box' scroll-x="true" wx:if="{{item.images.length >= 3}}" catchtap="showFullImg" data-imgs="{{item.images}}">
+          <image src='{{item.url}}' class='qus-img' wx:for="{{item.images}}" wx:key="this"></image>
+      </scroll-view>
+
+      <!-- <scroll-view class="scroll-box" scroll-x="true">
+        <block wx:for="{{item.images}}" wx:key='this'>
+          <image src='{{item.url}}' class='member_wenti_img' mode='aspectFill' catchtap="showFullImg"></image>
+        </block>
+      </scroll-view>  -->
+
+      <!-- <image src='{{item.images[0].url}}' class='qus-img-2' wx:if="{{item.images.length == 1}}" catchtap="showFullImg" data-imgs="{{item.images}}" mode="aspectFill"></image>
+      <scroll-view class='img-box-3 img-box' scroll-x="true" wx:if="{{item.images.length == 2}}" catchtap="showFullImg" data-imgs="{{item.images}}">
+          <image src='{{item.url}}' class='qus-img-3' wx:for="{{item.images}}" wx:key="this"></image>
+      </scroll-view>
+      <scroll-view class='scroll-box' scroll-x="true" wx:if="{{item.images.length >= 3}}" catchtap="showFullImg" data-imgs="{{item.images}}">
+          <image src='{{item.url}}' class='qus-img' wx:for="{{item.images}}" wx:key="this"></image>
+      </scroll-view> -->
+
+
+      <view class='member_wenti_center display-flex' bindtap='tz_detail' data-questionid="{{item.id}}">
+        <view>{{item.grade.name}}<text>{{item.subject.name}}</text></view>
+        <view>回答<text>{{item.answernum}}</text></view>
+      </view>
+      <view class='member_wenti_bottom fr'>
+        <view class='member_wenti_bottom1' catchtap='bangta' data-myid="{{item.id}}" data-title="{{item.name}}">帮TA解答</view>
+        <view class='member_wenti_bottom2' data-questionid="{{item.id}}"  catchtap='findpeople'>找人解答</view>
+      </view>
+      <view class='clr'></view>
+    </view>  
+   
+</view> 
+
+
+<fullImg imgList="{{fullImgList}}" wx:if="{{isShowFullImg}}" catch:hideFullImg="hideFullImg"></fullImg>
+
+
+

@@ -1,0 +1,76 @@
+<!--pages/question/questionDetail/questionDetail.wxml-->
+<import src="../../../wxParse/wxParse.wxml" />
+    <view class='member_wentibox'>
+      <view class='member_wenti_top display-flex'>
+        <image src='../../../images/home/content/gold.png' class='gold_img '></image>
+        <view class='member_wenti_num '>{{detail.point}}</view>
+        <view class='member_wenti_title '>{{detail.name}}</view>
+      </view>
+      <!-- <scroll-view class="scroll-box" scroll-x="true">
+        <block wx:for="{{detail.images}}" wx:key="this">
+          <image src='{{item.url}}' class='member_wenti_img' mode='aspectFill'></image>
+        </block>
+      </scroll-view> -->
+      <block wx:for="{{detail.images}}" wx:if="{{detail.images.length > 0}}" wx:key="this">
+            <image src="{{item.url}}" class="qus-img" mode="widthFix"></image>
+      </block>
+      <view class='member_wenti_center display-flex'>
+        <view>{{detail.grade.name}}<text>{{detail.subject.name}}</text></view>
+        <view>回答<text>{{detail.answernum}}</text></view>
+      </view>
+      <view class='member_wenti_bottom fr'>
+        <view class='member_wenti_bottom1' catchtap='bangta'>帮TA解答</view>
+        <view class='member_wenti_bottom2' data-questionid="{{detail.id}}"  catchtap='findpeople'>找人解答</view>
+      </view>
+      <view class='clr'></view>
+    </view>
+
+
+<view class="ans-container">
+    <block wx:if="{{showEmpty}}">
+        <view class='r_nodata_box'>
+          <image src='../../../images/nodata.png' class='r_nodata_img' mode="widthFix"></image>
+          <view class='r_nodata_text'>暂时没有数据</view>
+        </view> 
+    </block>
+    <block wx:else>
+        <view class="ans-tit-box">
+            <view class="ans-tit">全部回答</view>
+        </view>
+
+        <view class="ans-item" wx:for="{{ansList}}" wx:key="this" wx:for-index="index">
+            <image wx:if="{{item.isuse == 1}}" class="ans-status" src="../../../images/cn.png"></image>
+            <view class="ans-info">
+                <view class="ans-lt">
+                    <image wx:if="{{item.userInfo.avatar==''}}" src="../../../images/user/headPortrait.png" class="ans-head-img"></image>
+                    <image wx:else src="{{item.userInfo.avatar}}" class="ans-head-img"></image>
+                </view>
+                <view class="ans-rt">
+                    <view class="tea-info">
+                        <text class="ans-name">{{item.userInfo.nickname}}</text>
+                        <!-- <text class="tip">代课老师</text> -->
+                    </view>
+                    <view class="ans-time">{{item.difftime}}</view>
+                    
+                    <view class="wxParse">
+                        <block wx:for="{{ansContentList}}" wx:key="key" wx:for-index="i">
+                            <block wx:if="{{index == i}}">
+                                <template is="wxParse" data="{{wxParseData: item}}" />
+                            </block>
+                        </block>
+                    </view>
+
+                    <!-- <view class="add-agr">
+                        <addAgre item="{{item}}" resourcetypeid="9" agreenum="{{item.agreenum}}"></addAgre>
+                    </view> -->
+                    <view class="add-agr" catchtap='addAgree' data-isagree='{{item.isagree}}' data-myid='{{item.id}}'>
+                        <image wx:if="{{item.isagree==2}}" src="../../../images/agr.png" class="dz-icon"></image>
+                        <image wx:else src="../../../images/agr4.png" class="dz-icon"></image>
+                        <text class="dz-count {{item.isagree==2?'': 'add-count'}}">{{item.agreenum}}</text>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </block>
+</view>
+<fullImg imgList="{{fullImgList}}" wx:if="{{isShowFullImg}}" catch:hideFullImg="hideFullImg"></fullImg>

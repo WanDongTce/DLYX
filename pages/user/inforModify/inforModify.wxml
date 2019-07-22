@@ -1,0 +1,81 @@
+<!--pages/user/inforModify/inforModify.wxml-->
+
+  <!-- <view class="fl modify_left">我的头像</view>
+  <view class="fr modify_right" style="position:relative">
+    <image wx:if="{{headerImg==''}}" src="../../../images/user/headPortrait.png" class="modify_pic" hidden="{{oldPic}}"></image>
+    <image wx:else src="{{headerImg}}" class="modify_pic" hidden="{{oldPic}}"></image>
+    <image  class="img_new2" src="../../../images/user/r_user_right.png"></image>    
+  </view> -->
+<view class="modify_pic_box overf" bindtap="modHead">
+  <view class="fl modify_left">我的头像</view>
+  <view class="fr modify_right position_r" >
+      <image wx:if="{{headImg==''}}" src="../../../images/user/headPortrait.png" class="modify_pic"></image>
+      <image src="{{headImg}}" class="modify_pic"></image>
+  </view>
+  <image class="img_new2" src="../../../images/user/r_user_right.png"></image>
+</view>
+
+
+<view class="modify_box overf" >
+  <view class="fl modify_left">真实姓名</view>
+  <view class="fr modify_right qianse">    
+     {{info.realname}} 
+    
+  </view>
+</view>
+
+
+<view class="modify_box overf" >
+  <view class="fl modify_left">性别</view>  
+  <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}" class="fr modify_right shense" >    
+      {{array[index]}} <image class="img_new" src="../../../images/user/r_user_right.png"></image>    
+  </picker>
+</view>
+
+<view class="modify_box overf" >
+  <view class="fl modify_left">手机号码</view>
+  <view class="fr modify_right qianse">
+     {{info.mobile}}  
+    
+  </view>
+</view>
+<view class="modify_box overf" bindtap="tz_modifypassword">
+  <view class="fl modify_left">账户密码</view>
+  <view class="fr modify_right">   
+    <image class="img_new" src="../../../images/user/r_user_right.png"></image>
+  </view>
+</view>
+<view class="modify_box overf" bindtap="tz_txpassword">
+  <view class="fl modify_left">提现密码</view>
+  <view class="fr modify_right">   
+    <image class="img_new" src="../../../images/user/r_user_right.png"></image>
+  </view>
+</view>
+
+<view class="modify_box overf" bindtap='tz_bankcard'>
+  <view class="fl modify_left">提现卡号</view>
+  <view class="fr modify_right shense new_width" >    
+     
+     
+    <image class="img_new" src="../../../images/user/r_user_right.png"></image>
+  </view>  
+</view>
+
+<view class="modify_box overf ssqy">
+  <view class="fl modify_left">所属区域</view>
+  <view class="fr modify_right qianse">
+    {{info.agentlev_name}}
+  </view>
+</view>
+
+
+
+
+
+
+
+  
+
+
+
+

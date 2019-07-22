@@ -1,0 +1,83 @@
+<!--pages/home/finance/increase/increase.wxml-->
+<view class='fixtop'>
+  <picker mode="date" value="{{date}}" start="" end="{{currentdate2}}" bindchange="bindDateChange" class='fixtop_picker' fields="month">
+    <view class="picker">
+       {{date}}
+       <image src='../../../../images/arrow_down_fff.png' class='arrow_down_fff'></image>
+    </view>
+  </picker>
+  <view class='fixtop_qb' bindtap='see_all'>查看全部</view>
+</view>
+<!-- 切换 -->
+<view class="tab-left" bindtap="tabFun"> 
+  
+    <view class="tab-left_view {{tabArr.curHdIndex=='0'? 'active' : ''}}" id="tab-hd01" data-id="0">
+    
+      <view id="tab-hd01" data-id="0" class="{{tabArr.curHdIndex=='0'? 'active2' : ''}}">累积收益</view>
+      <view wx:if="{{tabArr.curHdIndex=='0'}}" class="tabline_box">
+        <image src='../../../../images/home/content/tabline_red.png' class='tabline'></image>
+      </view>
+    </view> 
+  
+  
+    <view class="tab-left_view {{tabArr.curHdIndex=='1'? 'active' : ''}}" id="tab-hd02" data-id="1">
+    
+      <view class="{{tabArr.curHdIndex=='1'? 'active2' : ''}}" id="tab-hd02" data-id="1">新增会员</view>
+      <view wx:if="{{tabArr.curHdIndex=='1'}}" class="tabline_box">
+        <image src='../../../../images/home/content/tabline_red.png' class='tabline'></image>
+      </view>
+    </view> 
+
+    <view class="tab-left_view {{tabArr.curHdIndex=='2'? 'active' : ''}}" id="tab-hd03" data-id="2">
+    
+      <view id="tab-hd03" data-id="2" class="{{tabArr.curHdIndex=='2'? 'active2' : ''}}">新增代理</view>
+      <view wx:if="{{tabArr.curHdIndex=='2'}}" class="tabline_box">
+        <image src='../../../../images/home/content/tabline_red.png' class='tabline'></image>
+      </view>
+    </view>
+  
+</view> 
+ 
+<view class="tab-right"> 
+  <view class="right-item {{tabArr.curBdIndex=='0'? 'active' : ''}}">
+     <block wx:for="{{listLjsy}}" wx:key="this"> 
+      <view class='member_cz_box overf' bindtap='tz_ljsy' data-myid="{{item.id}}" data-type='{{item.type}}' data-info="{{item.info}}" data-price='{{item.price}}' data-createdate="{{item.createdate}}">
+        <view class='fl '>
+          <view class='member_cz_text1'>{{item.info}}</view>
+          <view class='member_cz_text2'>{{item.createdate}}</view>
+        </view>
+        <view class='member_cz_text3 fr'>+{{item.price}}</view>
+      </view>
+     </block> 
+  </view> 
+  <view class="right-item {{tabArr.curBdIndex=='1'? 'active' : ''}}">
+    <block wx:for="{{listXzhy}}" wx:key="this"> 
+      <view class='member_cz_box overf' bindtap='tz_xzhy' data-myid="{{item.id}}" data-refereename='{{item.referee_name}}' data-username='{{item.user_name}}' data-createtime='{{item.create_time}}' data-userschool='{{item.user_school}}' data-agenttype='{{item.agent_type}}'>
+        <view class='fl '>
+          <view class='member_cz_text1'>会员姓名：{{item.user_name}}</view>
+          <view class='member_cz_text2'>{{item.create_time}}</view>
+        </view>
+        <view class='member_cz_text4 fr'>推荐人：{{item.referee_name}}</view>
+      </view>
+    </block>
+    
+  </view> 
+  <view class="right-item {{tabArr.curBdIndex=='2'? 'active' : ''}}">
+    <block wx:for="{{listXzdl}}" wx:key="this"> 
+      <view class='member_cz_box overf' bindtap='tz_xzdl' data-myid="{{item.id}}" data-name="{{item.name}}"  data-agenttype="{{item.agent_type}}" data-parentagent="{{item.parent_agent}}"  data-area="{{item.area}}">
+        <view class='fl '>
+          <view class='member_cz_text1'>代理名称：{{item.name}}</view>
+          <view class='member_cz_text2'>{{item.createdate}}</view>
+        </view>
+        <view class='fr text-align-right'>
+          <view class='member_cz_text8'>{{item.agent_type}}</view>
+          <view class='member_cz_text9' wx:if="{{item.parent_agent==''}}"></view>
+          <view class='member_cz_text9' wx:else>推荐人：{{item.parent_agent}}</view>
+        </view>
+      </view>
+    </block>
+    
+    
+  </view> 
+
+</view> 

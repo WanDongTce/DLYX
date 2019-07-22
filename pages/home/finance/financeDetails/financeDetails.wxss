@@ -1,0 +1,93 @@
+/* pages/home/finance/financeDetails/financeDetails.wxss */
+page{background-color:#f4f4f4;}
+.member_cz_box{
+  border-bottom:1rpx solid #DFDFDF;
+  background-color:#fff;
+}
+.member_cz_text1{
+  font-size:28rpx;
+  color:#333;
+  margin-top:30rpx;
+  margin-left:30rpx;
+}
+.member_cz_text2{
+  font-size:24rpx;
+  color:#999;
+  margin-top:24rpx;
+  margin-left:30rpx;
+  margin-bottom:28rpx;
+}
+.member_cz_text3{
+  font-size:28rpx;
+  color:#ED1B1A;
+  margin-right:30rpx;
+  margin-top:50rpx;
+}
+
+
+.top_box{
+  position:fixed;
+  top:0;
+  width:100%;
+  border-bottom:16rpx solid #ddd;
+  background-color:#fff;
+}
+.top_inline{
+  display: inline-block;
+  width:50%;
+  height:90rpx;
+  line-height:90rpx;
+  font-size:26rpx;
+  color:#333; 
+  text-align: center;
+}
+.top_inline2{
+  display: inline-block;
+  width:100%;
+  height:90rpx;
+  line-height:90rpx;
+  font-size:26rpx;
+  color:#333; 
+  text-align: center;
+}
+.top_inline image{
+  width:30rpx;
+  height:30rpx;
+  vertical-align: middle;
+  margin-right:15rpx;
+}
+.top_inline2 image{
+  width:30rpx;
+  height:30rpx;
+  vertical-align: middle;
+  margin-right:15rpx;
+}
+.newmt{
+  margin-top:106rpx;
+}
+
+
+.member_cz_text4{
+  font-size:28rpx;
+  color:#999;
+  margin-right:30rpx;
+  margin-top:85rpx;
+}
+.member_cz_text8{
+  color:#DBBE53;
+  font-size:24rpx;
+  margin-top:26rpx;
+  margin-right:30rpx;
+  padding:0 12rpx;
+  line-height:40rpx;
+  border:1rpx solid #DBBE53;
+  display: inline-block;
+  text-align: right;  
+}
+.member_cz_text9{
+  font-size:24rpx;
+  color:#999;
+  text-align: right;
+  margin-top:18rpx;
+  margin-right:30rpx;
+}

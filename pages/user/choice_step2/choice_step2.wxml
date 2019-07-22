@@ -1,0 +1,15 @@
+<!--pages/user/choice_step2/choice_step2.wxml-->
+<view class='box'>
+    <view class='h1'>请选择代理类型</view>
+    <block wx:for='{{list}}' wx:key='this' >
+        <view class='input_box  display-flex justify-content-between' catchtap="selectClick" id="{{index}}" data-optionid='{{item.key}}'>
+            <view class='select_text'>{{item.value}}</view>
+            <image wx:if="{{item.checked==0}}" src='../../../images/login/select_off.png' class='select_img'></image>
+            <image wx:if="{{item.checked==1}}" src='../../../images/login/select_on.png' class='select_img'></image>
+        </view>
+    </block>
+    <view class='btn mt70' bindtap='clicknext'>下一步</view>
+    
+            
+</view>
+            

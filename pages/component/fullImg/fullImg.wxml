@@ -1,0 +1,10 @@
+<view id="fullImg" class="box">
+    <swiper indicator-dots="true" indicator-color="rgba(72,185,71,.3)" indicator-active-color="#48b947">
+        <block wx:for="{{imgList}}" wx:key="this">
+            <swiper-item catchtap="hideFullImg">
+                <image wx:if="{{item.image}}" src="{{item.image}}" class="full-img" mode="aspectFit"/>
+                <image wx:if="{{item.url}}" src="{{item.url}}" class="full-img" mode="aspectFit"/>
+            </swiper-item>
+        </block>
+    </swiper>
+</view>

@@ -1,0 +1,36 @@
+/* pages/user/register/register.wxss */
+@import "/pages/user/login/login.wxss";  
+
+.input_code{
+    width:310rpx;
+    font-size:30rpx;
+    margin-left:28rpx;
+    height:100%;
+}
+.vcode_view{
+    height:58rpx;
+    line-height: 58rpx;
+    border:1px solid #656565;
+    box-sizing: border-box;
+    border-radius: 5rpx;
+    width:146rpx;
+    text-align: center;
+    margin-top:11rpx;
+}
+.vcode_viewold{
+    background-color:#fff;
+    color:#606060;
+}
+.vcode_viewnew{
+    background-color:#ed1b1a;
+    border:1px solid #ed1b1a;
+    color:#fff;
+}
+.ifpassword_img{
+    width:38rpx;
+    height:26rpx;
+    margin-top:27rpx;
+}
+.new_bottomfixd text{
+    /* text-decoration: red; */
+}

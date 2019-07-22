@@ -1,0 +1,14 @@
+/* pages/user/choice_step3/choice_step3.wxss */
+@import "/pages/user/choice_step1/choice_step1.wxss";
+.picker-text{
+    font-size:32rpx;
+    
+    margin-left:36rpx;
+}
+.arrow_right{
+    width:26rpx;
+    height:14rpx;
+
+    margin-top:37rpx;
+    margin-right:26rpx;
+}

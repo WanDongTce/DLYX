@@ -1,0 +1,8 @@
+{
+    "navigationBarTitleText": "评论",
+    "usingComponents": {
+        "empty": "/pages/component/empty/empty",
+        "addAgre": "/pages/component/addAgree/addAgree",
+        "accord": "/pages/component/accord/accord"
+    }
+}

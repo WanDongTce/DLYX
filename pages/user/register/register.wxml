@@ -1,0 +1,35 @@
+<!--pages/user/register/register.wxml-->
+<image src='../../../images/login/train_login_bg.png' mode="widthFix" class='login_bg'></image>
+<view class='logo_box position-absolute'>
+  <image src='../../../images/login/agent_login_logo.png' class='login_logo' mode="widthFix"></image>
+</view>
+
+<view class='item_bigbox position-absolute' style='width: {{scrollWidth}}px;'>
+  <view class='display-flex login_itembox'>
+    <image src='../../../images/login/train_phone_number.png'  class='logo_centerimg '></image> 
+    <input placeholder='请输入手机号' placeholder-class='placeholder' type='number' bindinput="userNameInput" class='login_input ' name="username" ></input>
+  </view>
+
+  <!-- 验证码 -->
+  <view class='display-flex login_itembox justify-content-between '>
+    <view class='display-flex'>
+        <image src='../../../images/login/vcode.png'  class='logo_centerimg '></image> 
+        <input placeholder='请输入验证码' placeholder-class='placeholder' type='text'  class='input_code'  confirm-type="next" name="modify_verifycode" bindinput="verifycode"></input>
+    </view>
+    <view class="vcode_view f_24 {{verify_color? 'vcode_viewnew' : 'vcode_viewold'}}" bindtap="identify">{{verifyCodeTime}}</view>
+  </view>
+
+
+  <view class='display-flex login_itembox justify-content-between'>
+    <view class='display-flex'>
+        <image src='../../../images/login/train_lock_password.png'  class='logo_centerimg2 '></image> 
+        <input placeholder='请输入密码' placeholder-class='placeholder' type="{{passwordtype}}" class='input_code' name="password" bindinput="passWordInput"></input>
+    </view>
+    <image src="{{passwordimg}}" bindtap="passwordimg" class='ifpassword_img'></image>
+  </view>  
+
+
+  <button class='login_btn' bindtap="loginBtnClick">立即注册</button>
+</view> 
+
+<view class='new_bottomfixd'>注册即代表阅读并同意<text class='c_gf' catchtap='agremt'>《A计划营销管理使用协议》</text></view>

@@ -1,0 +1,16 @@
+<!--pages/home/directAgency/directAgency.wxml-->
+<view class='rdirect_box display-flex' wx:if="{{directinfoshow==1}}"  bindtap='tz_numberone'>
+  <view class='rdirect_left'>直属校园代理</view>
+  <view class='rdirect_right'>
+    {{numberone}}
+    <image src='../../../images/arrow_right_grey.png' class='rdirect_arrow'></image>
+  </view>
+</view>
+<view wx:else></view>
+<view class='rdirect_box display-flex'  bindtap='tz_numbertwo'>
+  <view class='rdirect_left'>直属校园加盟商</view>
+  <view class='rdirect_right'>
+    {{numbertwo}}
+    <image src='../../../images/arrow_right_grey.png' class='rdirect_arrow'></image>
+  </view>
+</view>

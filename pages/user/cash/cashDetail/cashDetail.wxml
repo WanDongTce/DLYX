@@ -1,0 +1,29 @@
+<!--pages/user/cash/cashDetail/cashDetail.wxml-->
+<view class='bigbox'>
+  
+  <view class='item_box'>
+    <view class='item display-flex'>
+      <view class='item_left'>申请时间<text></text></view>
+      <view class='item_right'>{{list.createdate}}</view>
+    </view>
+    <view class='item display-flex'>
+      <view class='item_left'>提现金额<text></text></view>
+      <view class='item_right'>{{list.price}}</view>
+    </view>
+    <view class='item display-flex'>
+      <view class='item_left'>提现银行卡</view>
+      <view class='item_right'>{{list.bankname}}</view>
+    </view>
+    <view class='item display-flex'>
+      <view class='item_left'>持卡人姓名</view>
+      <view class='item_right'>{{list.bank_username}}</view>
+    </view>
+    <view class='item display-flex'>
+      <view class='item_left'>提现进度<text></text></view>
+      <view class='item_right' wx:if="{{list.putstatus==1}}">申请中</view>
+      <view class='item_right' wx:if="{{list.putstatus==2}}">处理中</view>
+      <view class='item_right' wx:if="{{list.putstatus==3}}">已完成</view>
+    </view>
+    
+  </view>
+</view>

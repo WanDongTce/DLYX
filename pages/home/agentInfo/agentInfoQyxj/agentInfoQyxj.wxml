@@ -1,0 +1,117 @@
+
+
+<block wx:if="{{ power == 1 }}">
+  <!--市  -->
+  <block wx:for="{{cityList}}" wx:for-item="cityItem" wx:key="this">
+    <view class="overf shibox" catch:tap="showItem" data-addressId="{{cityItem.id}}" data-dailiType="2" >
+      <view class='fl shi_text1' catch:tap="showItem" data-addressId="{{cityItem.id}}" data-dailiType="2">{{cityItem.name}}</view>
+      <view class='fl shi_text2' catch:tap="showItem" data-addressId="{{cityItem.id}}" data-dailiType="2">{{cityItem.ptype}}：{{cityItem.pcount}}</view>
+      <view class='fl shi_text3' data-dlxm="{{cityItem.duser}}" data-dljb="{{cityItem.type}}" data-ssdl="{{cityItem.from_name}}" data-zcsj="{{cityItem.reg_time}}" catchtap='name_dialog'>{{cityItem.duser}}</view>
+      <image wx:if="{{currentCity == cityItem.id}}" catch:tap="showItem" data-addressId="{{cityItem.id}}" data-dailiType="2" class="circle_row fr" src="../../../../images/home/content/circle_uparrow.png"></image>
+      <image wx:else catch:tap="showItem" data-addressId="{{cityItem.id}}" data-dailiType="2" class="circle_row fr" src="../../../../images/home/content/circle_downarrow.png"></image> 
+    </view>
+    <!--区  --> 
+    <view wx:if="{{currentCity == cityItem.id}}" animation="{{animationDown1}}"> 
+      <block wx:for="{{areaList}}" wx:key="this" wx:for-item="areaItem">
+        <view class="qubox overf" catch:tap="showItem" data-addressId="{{areaItem.id}}" data-dailiType="3">    
+          <view class='fl qu_text1' catch:tap="showItem" data-addressId="{{areaItem.id}}" data-dailiType="3">{{areaItem.name}}</view>
+          <view class='fl qu_text2' catch:tap="showItem" data-addressId="{{areaItem.id}}" data-dailiType="3">{{areaItem.ptype}}：{{areaItem.pcount}}</view>
+          <view class='fl qu_text3' data-dlxm="{{areaItem.duser}}" data-dljb="{{areaItem.type}}" data-ssdl="{{areaItem.from_name}}" data-zcsj="{{areaItem.reg_time}}" catchtap='name_dialog'>{{areaItem.duser}}</view>
+          <image class='circle_row fr' wx:if="{{currentArea == areaItem.id}}" catch:tap="showItem" data-addressId="{{areaItem.id}}" data-dailiType="3" src='../../../../images/home/content/uparrow.png'></image> 
+          <image class='circle_row fr' wx:else catch:tap="showItem" data-addressId="{{areaItem.id}}" data-dailiType="3" src='../../../../images/home/content/downarrow.png'></image>     
+        </view>
+        <!--校  -->
+        <view wx:if="{{currentArea == areaItem.id}}" animation="{{animationDown2}}">
+          <block wx:for="{{schoolList}}" wx:for-item="schoolItem" wx:key="this">
+            <view class="qubox overf" catch:tap="showStudent"  data-schoolid="{{schoolItem.id}}" data-schoolname="{{schoolItem.name}}">    
+              <view class='fl qu_text1' catch:tap="showStudent"  data-schoolid="{{schoolItem.id}}" data-schoolname="{{schoolItem.name}}">●{{schoolItem.name}}</view>
+              <view class='fl qu_text2' catch:tap="showStudent"  data-schoolid="{{schoolItem.id}}" data-schoolname="{{schoolItem.name}}">{{schoolItem.ptype}}：{{schoolItem.pcount}}</view>
+              <view class='fl qu_text3' data-dlxm="{{schoolItem.duser}}" data-dljb="{{schoolItem.type}}" data-ssdl="{{schoolItem.from_name}}" data-zcsj="{{schoolItem.reg_time}}" catchtap='name_dialog'>{{schoolItem.duser}}</view>
+              <image catch:tap="showStudent"  data-schoolid="{{schoolItem.id}}" data-schoolname="{{schoolItem.name}}" class='circle_row fr' src='../../../../images/home/content/rightarrow.png'></image>   
+            </view>
+          </block> 
+        </view>
+      </block>
+    </view>
+  </block>
+</block>
+
+
+
+
+<!-- detail dialog  -->
+    <view class="detail-dialog-mask" bindtap="hideDialog" wx:if="{{isShowDialog}}"></view>
+    <view animation="{{animationData}}" class="detail-container" wx:if="{{isShowDialog}}">
+        <view class='detail-content border-none'>
+            <view class='rdialog_top'>代理详情</view>
+            <view class='detail-item'>
+                代理姓名：
+                <text class='rdialog_text' >{{dlxm}}</text>
+                
+            </view>			
+            <view class='detail-item'>
+                代理级别：
+                <text class='rdialog_text'> {{dljb}}</text>
+                
+            </view>
+            <!-- <view class='detail-item'>
+                代理区域：
+                <text class='rdialog_text' >{{dlqy}}</text>
+                
+            </view> -->
+            <view class='detail-item'>
+                所属代理：
+                <text class='rdialog_text' >{{ssdl}}</text>
+                
+            </view>
+            <view class='detail-item'>
+                    注册时间：
+                    <text class='rdialog_text' >{{zcsj}}</text>
+                    
+                </view>
+            </view>
+        
+
+    </view>
+    <!--  detail dialog end  -->
+
+
+
+
+
+<block wx:if="{{ power == 2 }}">    
+    <!--区  -->     
+      <block wx:for="{{areaList}}" wx:key="this" wx:for-item="areaItem">
+        <view class="qubox overf" catch:tap="showItem" data-addressId="{{areaItem.id}}" data-dailiType="3">    
+          <view class='fl qu_text1' catch:tap="showItem" data-addressId="{{areaItem.id}}" data-dailiType="3">{{areaItem.name}}</view>
+          <view class='fl qu_text2' catch:tap="showItem" data-addressId="{{areaItem.id}}" data-dailiType="3">{{areaItem.ptype}}：{{areaItem.pcount}}</view>
+          <view class='fl qu_text3' data-dlxm="{{areaItem.duser}}" data-dljb="{{areaItem.type}}" data-ssdl="{{areaItem.from_name}}" data-zcsj="{{areaItem.reg_time}}" catchtap='name_dialog'>{{areaItem.duser}}</view>
+          <image class='circle_row fr' wx:if="{{currentArea == areaItem.id}}" catch:tap="showItem" data-addressId="{{areaItem.id}}" data-dailiType="3" src='../../../../images/home/content/uparrow.png'></image> 
+          <image class='circle_row fr' wx:else catch:tap="showItem" data-addressId="{{areaItem.id}}" data-dailiType="3" src='../../../../images/home/content/downarrow.png'></image>     
+        </view>
+        <!--校  -->
+        <block wx:if="{{currentArea == areaItem.regoinId}}">       
+          <block wx:for="{{schoolList}}" wx:for-item="schoolItem" wx:key="this">
+            <view class="qubox overf" animation="{{animationDown2}}" catch:tap="showStudent"  data-schoolid="{{schoolItem.id}}" data-schoolname="{{schoolItem.name}}">    
+              <view class='fl qu_text1' catch:tap="showStudent"  data-schoolid="{{schoolItem.id}}" data-schoolname="{{schoolItem.name}}">●{{schoolItem.name}}</view>
+              <view class='fl qu_text2' catch:tap="showStudent"  data-schoolid="{{schoolItem.id}}" data-schoolname="{{schoolItem.name}}">{{schoolItem.ptype}}：{{schoolItem.pcount}}</view>
+              <view class='fl qu_text3' data-dlxm="{{schoolItem.duser}}" data-dljb="{{schoolItem.type}}" data-ssdl="{{schoolItem.from_name}}" data-zcsj="{{schoolItem.reg_time}}" catchtap='name_dialog'>{{schoolItem.duser}}</view>
+              <image catch:tap="showStudent"  data-schoolid="{{schoolItem.id}}" data-schoolname="{{schoolItem.name}}" class='circle_row fr' src='../../../../images/home/content/rightarrow.png'></image>   
+            </view>
+          </block>         
+        </block>
+      </block> 
+</block>
+
+<block wx:if="{{ power == 3 }}"> 
+          <!--校  -->
+             
+          <block wx:for="{{schoolList}}" wx:for-item="schoolItem" wx:key="this">
+            <view class="qubox overf" animation="{{animationDown2}}" catch:tap="showStudent"  data-schoolid="{{schoolItem.id}}" data-schoolname="{{schoolItem.name}}">    
+              <view class='fl qu_text1' catch:tap="showStudent"  data-schoolid="{{schoolItem.id}}" data-schoolname="{{schoolItem.name}}">●{{schoolItem.name}}</view>
+              <view class='fl qu_text2' catch:tap="showStudent"  data-schoolid="{{schoolItem.id}}" data-schoolname="{{schoolItem.name}}">{{schoolItem.ptype}}：{{schoolItem.pcount}}</view>
+              <view class='fl qu_text3' data-dlxm="{{schoolItem.duser}}" data-dljb="{{schoolItem.type}}" data-ssdl="{{schoolItem.from_name}}" data-zcsj="{{schoolItem.reg_time}}" catchtap='name_dialog'>{{schoolItem.duser}}</view>
+              <image catch:tap="showStudent"  data-schoolid="{{schoolItem.id}}" data-schoolname="{{schoolItem.name}}" class='circle_row fr' src='../../../../images/home/content/rightarrow.png'></image>   
+            </view>
+          </block>                
+</block>

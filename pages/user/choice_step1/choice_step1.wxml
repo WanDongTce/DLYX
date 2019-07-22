@@ -1,0 +1,9 @@
+<!--pages/user/choice_step1/choice_step1.wxml-->
+<view class='box'>
+    <view class='h1'>请填写推荐手机号</view>
+    <view class='input_box mt70'>
+        <input class='input' placeholder-class='placeholder' placeholder='请输入推荐人手机号' bindinput="inputphone"></input>
+    </view>
+    <view class='btn mt70' bindtap='clickfinish'>完成注册</view>
+    <view class='tiaoguo' bindtap='clicktiaoguo'>跳过</view>
+</view>

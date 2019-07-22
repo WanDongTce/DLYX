@@ -1,0 +1,84 @@
+<view class="tab-left"> 
+    <view class="tab-left_view {{currentTabIndex == 0? 'active' : ''}}" data-tabindex="0" bindtap="tabFun">   
+        <view class="{{currentTabIndex == 0? 'active2' : ''}}">全部数({{num0}})</view>
+        <view wx:if="{{currentTabIndex == 0}}" class="tabline_box">
+            <image src='../../../images/user/tabline.png' class='tabline'></image>
+        </view>
+    </view>   
+    <view class="tab-left_view {{currentTabIndex == 1? 'active' : ''}}" data-tabindex="1" bindtap="tabFun">
+        <view class="{{currentTabIndex == 1? 'active2' : ''}}">未发放({{num1}})</view>
+        <view wx:if="{{currentTabIndex == 1}}" class="tabline_box">
+            <image src='../../../images/user/tabline.png' class='tabline'></image>
+        </view>
+    </view> 
+    <view class="tab-left_view {{currentTabIndex == 2? 'active' : ''}}" data-tabindex="2" bindtap="tabFun">    
+        <view class="{{currentTabIndex == 2? 'active2' : ''}}">已发放({{num2}})</view>
+        <view wx:if="{{currentTabIndex == 2}}" class="tabline_box">
+            <image src='../../../images/user/tabline.png' class='tabline'></image>
+        </view>
+    </view>  
+</view> 
+ 
+<view class="tab-right">
+    
+  <view class="right-item " >
+    <view class='r_nodata_box' wx:if="{{list.length==0}}">
+      <image src='../../../images/nodata.png' class='r_nodata_img' mode="widthFix"></image>
+      <view class='r_nodata_text'>暂时没有数据</view>
+    </view> 
+    <block wx:key='this' wx:for="{{list}}" >
+      <!--    未发放 -->
+      <view wx:if="{{item.status==1}}">
+        <view class='cardbox' bindtap='tz_grant' data-tgkid='{{item.id}}'>
+          <image wx:if="{{item.is_cash==1}}" src='../../../images/user/cashback.png' class='cashback'></image>
+          <view class='cardbox_top '>
+            <view>
+              <text class='cardbox_top_text1'>卡号：{{item.card}}</text>
+              <text class='cardbox_top_text2 cardbox_green'>未发放</text>
+            </view>
+            <view class='card_money'>199元</view>
+          </view>
+          <view class='cardbox_bottom'>
+            <view class='cardbox_xlh'>序列号：{{item.sequence}}</view>
+            <view class='cardbox_fk'>
+              发卡
+              <image src='../../../images/user/fk.png'></image>
+            </view>
+          </view>
+        </view>
+      </view> 
+      <!--已使用  -->
+      <view wx:if="{{item.status==3}}">
+        <view class='cardbox'>
+          <image wx:if="{{item.is_cash==1}}" src='../../../images/user/cashback.png' class='cashback'></image>
+          <view class='cardbox_top '>
+            <view>
+              <text class='cardbox_top_text1'>卡号：{{item.card}}</text>
+              <text class='cardbox_top_text2 cardbox_red'>已使用</text>
+            </view>
+            <view class='card_money'>199元</view>
+          </view>
+           <view class='card_info'>使用日期：{{item.use_time}}</view> 
+           <view class='card_info'>使用信息：{{item.school}}</view> 
+        </view> 
+      </view>
+      <!-- 未使用 -->
+      <view wx:if="{{item.status==2}}">
+        <view class='cardbox'>
+          <image wx:if="{{item.is_cash==1}}" src='../../../images/user/cashback.png' class='cashback'></image>
+          <view class='cardbox_top '>
+            <view>
+              <text class='cardbox_top_text1'>卡号：{{item.card}}</text>
+              <text class='cardbox_top_text2 cardbox_orange'>未使用</text>
+            </view>
+            <view class='card_money'>199元</view>
+          </view>
+          <view class='card_info'>使用日期：{{item.use_time}}</view>
+          <view class='card_info'>使用信息：{{item.school}}</view> 
+        </view>  
+      </view>
+    </block>
+  </view> 
+</view> 
+
+

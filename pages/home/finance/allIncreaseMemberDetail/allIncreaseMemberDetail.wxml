@@ -1,0 +1,27 @@
+<!--pages/home/finance/allIncreaseMemberDetail/allIncreaseMemberDetail.wxml-->
+<view class='bigbox'>
+  
+  <view class='item_box'>
+    
+    <view class='item display-flex'>
+      <view class='item_left'>会员姓名</view>
+      <view class='item_right'>{{username}}</view>
+    </view>
+    <view class='item display-flex'>
+      <view class='item_left'>所属学校</view>
+      <view class='item_right'>{{userschool}}</view>
+    </view>
+    <view class='item display-flex'>
+      <view class='item_left'>注册时间</view>
+      <view class='item_right'>{{createtime}}</view>
+    </view>
+    <view class='item display-flex'>
+      <view class='item_left'>推<text class='item_ml_3'>荐</text>人</view>
+      <view class='item_right'>{{refereename}}<text wx:if="{{agenttype!==''}}">（{{agenttype}}）</text></view>
+    </view>
+    
+    
+  </view>
+</view>
+
+

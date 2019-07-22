@@ -1,0 +1,42 @@
+<!--pages/user/inforModify/bankcard/bankcard.wxml-->
+
+<view class='item_bigbox' wx:for="{{list}}" wx:key>
+  <view class='item_box'>
+    <view class='overf cardbox'>
+      <image  src="{{'../../../../images/card/'+item.bank_belong_code+'.png'}}" class="fl card_img"></image>
+      <view class='fl'>
+        <view>
+          <text class='card_text1'>{{item.bank_belong}}</text> <text class='card_text2'>{{item.bank_username}}</text>
+        </view>
+        <view class='card_text3'>
+          {{item.bank_number}}
+        </view>
+      </view>
+    </view>
+    <view class='item_bottom overf'>
+      <view class='fl' bindtap="selectClick" data-id="{{item.id}}">
+        <view wx:if="{{item.is_default == 1}}">
+          <image src='../../../../images/user/card/moren.png' class='moren_img'></image>
+          <text>默认地址</text>
+        </view>
+        <view wx:else>
+          <image src='../../../../images/user/card/moren_2.png' class='moren_img'></image>
+          <text>设为默认</text>
+        </view>
+      </view>
+      <view class='fr'>        
+        <view class='fr_dis' bindtap='catchTapDel' data-id="{{item.id}}">
+          <image src='../../../../images/user/card/del.png' class='del_img'></image>      
+          <text>删除</text>  
+        </view>    
+      </view>
+    </view>
+  </view>  
+</view>
+
+<navigator class='add_bigbox' url='/pages/user/inforModify/addbankcard/addbankcard'>
+  <view class='add_box' >
+    <image src='../../../../images/user/card/add.png' class='add_img'></image>
+    添加
+  </view>
+</navigator>

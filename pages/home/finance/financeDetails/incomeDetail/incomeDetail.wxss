@@ -1,0 +1,3 @@
+/* pages/home/finance/financeDetails/incomeDetail/incomeDetail.wxss */
+@import "/pages/home/finance/financeDetails/withdrawDetail/withdrawDetail.wxss";
+

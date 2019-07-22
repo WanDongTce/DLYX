@@ -1,0 +1,110 @@
+/* pages/home/finance/increase/increase.wxss */
+/* 切换 */
+.display_inline{display: inline;}
+.tab-left{ 
+  position:fixed;top:86rpx;left:0;
+  border-bottom:16rpx solid #dfdfdf;
+  overflow: hidden; height:80rpx;width:100%;
+}
+.tab-right{margin-top:182rpx;} 
+.tab-left_view { 
+ float:left;width:33.33%; background-color: #fff;text-align: center; font-size:30rpx; height:80rpx; line-height: 80rpx;color:#8D8D8D;
+} 
+.tab-left .active{ display: inline;
+   color:#ED1B1A; position:relative;
+} 
+.active2{border-bottom:4rpx solid #fff;display:inline-block;line-height: 80rpx;} 
+.tab-right .right-item{  
+ display: none; 
+} 
+.tab-right .right-item.active{ 
+ display: block; 
+}
+.tabline_box{position: absolute;bottom:0;left:0;width:100%;}
+.tabline{display: block;width:115rpx;height:4rpx;margin:0 auto;}
+/*切换end  */
+
+
+/*新增代理  */
+.member_cz_box{
+  border-bottom:1rpx solid #DFDFDF;
+  background-color:#fff;
+}
+.member_cz_text1{
+  font-size:28rpx;
+  color:#333;
+  margin-top:30rpx;
+  margin-left:30rpx;
+}
+.member_cz_text2{
+  font-size:24rpx;
+  color:#999;
+  margin-top:24rpx;
+  margin-left:30rpx;
+  margin-bottom:28rpx;
+}
+.member_cz_text3{
+  font-size:28rpx;
+  color:#ED1B1A;
+  margin-right:30rpx;
+  margin-top:50rpx;
+}
+.member_cz_text4{
+  font-size:28rpx;
+  color:#999;
+  margin-right:30rpx;
+  margin-top:85rpx;
+}
+.member_cz_text8{
+  color:#DBBE53;
+  font-size:24rpx;
+  margin-top:26rpx;
+  margin-right:30rpx;
+  padding:0 12rpx;
+  line-height:40rpx;
+  border:1rpx solid #DBBE53;
+  display: inline-block;
+  text-align: right;  
+}
+.member_cz_text9{
+  font-size:24rpx;
+  color:#999;
+  text-align: right;
+  margin-top:24rpx;
+  margin-right:30rpx;
+}
+
+
+/*顶部时间  */
+.fixtop{
+  position:fixed;
+  top:0;
+  left:0;
+  background-color:#2c2b31;
+  width:100%;
+  padding:14rpx 0;
+}
+.fixtop_picker{
+  color:#fff;
+  background-color:#4a4a4a;
+  line-height:58rpx;
+  border-radius:5rpx;
+  font-size:28rpx;
+  width:240rpx;
+  margin:0 auto;
+  text-align: center;
+}
+.arrow_down_fff{
+  vertical-align: middle;
+  width:18rpx;
+  height:14rpx;
+  margin-left:20rpx;
+}
+.fixtop_qb{
+  font-size:30rpx;
+  color:#fff;
+  position:absolute;
+  top:0;
+  right:24rpx;
+  line-height:86rpx;
+}

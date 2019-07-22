@@ -1,0 +1,33 @@
+/* pages/user/inforModify/inforModify.wxss */
+page{
+  background-color:#f4f4f4;
+}
+
+.modify_pic_box{ padding:0 24rpx 0 24rpx; line-height: 165rpx; height: 165rpx; border-bottom: 1px solid #e4e4e4; position: relative; background-color:#fff;}
+
+.modify_box{ padding:0 24rpx 0 24rpx; line-height: 100rpx; height: 100rpx; border-bottom: 1px solid #e6e6e6;
+  background-color:#fff;
+}
+.modify_left{ color:#333; font-size: 32rpx;font-weight:bold;}
+.modify_right{ color:#8a8a8a; font-size: 29rpx; width:480rpx; text-align: right;}
+.modify_right text{ margin-left:10rpx; font-size: 32rpx;}
+
+.modify_pic{width:133rpx; height: 133rpx; border-radius: 100%;top:16rpx; right:30rpx;position: absolute;}
+.modify_pic_text{ height: 165rpx; line-height: 165rpx; position: absolute;right:0;}
+
+.modify_pic_view{position: absolute; top:16rpx; right:30rpx;}
+.publish_pubpic{ width:133rpx; height: 133rpx; border-radius: 100%;}
+
+.img_new{width:13rpx;height:21rpx;line-height:100rpx;display:inline-block;vertical-align:middle;margin-left:15rpx;}
+.img_new2{width:13rpx;height:21rpx;display:inline-block;vertical-align:middle;margin-left:15rpx; position: absolute;right:24rpx;top:66.5rpx;}
+.modify_right .wbd_new{font-size:29rpx !important;}
+
+.shense{color:#878787;}
+.qianse{color:#878787;}
+.modify_right .new_ml{margin-left:35rpx !important;}
+.new_width{width:520rpx;}
+
+.ssqy{
+  margin-top:16rpx;
+  border:none;
+}

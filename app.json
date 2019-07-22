@@ -1,0 +1,96 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/user/choice_step2/choice_step2",
+    "pages/user/login/login",
+    "pages/user/choice_step3/choice_step3",
+    "pages/user/choice_step1/choice_step1",
+    "pages/user/register/register",
+    "pages/user/agremt/agremt",
+    "pages/user/rechargeAgreement/rechargeAgreement",
+    "pages/user/recharge/recharge",
+    "pages/home/memberDetails/memberDetails",
+    "pages/home/finance/financeDetails/incomeDetail/incomeDetail",
+    "pages/home/finance/allIncome/allIncome",
+    "pages/home/finance/allIncreaseMember/allIncreaseMember",
+    "pages/home/finance/allIncreaseAgent/allIncreaseAgent",
+    "pages/home/finance/allIncomeChart/allIncomeChart",
+    "pages/home/finance/allIncreaseMemberChart/allIncreaseMemberChart",
+    "pages/home/finance/allIncreaseAgentChart/allIncreaseAgentChart",
+    "pages/home/finance/allIncomeDetail/allIncomeDetail",
+    "pages/home/finance/allIncreaseMemberDetail/allIncreaseMemberDetail",
+    "pages/home/finance/allIncreaseAgentDetail/allIncreaseAgentDetail",
+    "pages/home/directAgency/directAgencyXydlSchool/directAgencyXydlSchool",
+    "pages/home/directAgency/directAgency",
+    "pages/home/directAgency/directAgencyXydl/directAgencyXydl",
+    "pages/home/directMember/directMember",
+    "pages/home/directAgency/directJm/directJm",
+    "pages/home/agentInfo/agentInfoQyxj/agentInfoQyxj",
+    "pages/home/agentInfo/agentInfoXyjm/agentInfoXyjm",
+    "pages/home/agentInfo/agentInfoItemSelect/agentInfoItemSelect",
+    "pages/question/question",
+    "pages/question/questionChoice/questionChoice",
+    "pages/question/questionDetail/questionDetail",
+    "pages/question/answer/answer",
+    "pages/webView/webView",
+    "pages/home/finance/increase/increase",
+    "pages/home/finance/financeDetails/withdrawDetail/withdrawDetail",
+    "pages/news/news",
+    "pages/news/newsDetail/newsDetail",
+    "pages/news/commentsList/commentsList",
+    "pages/user/user",
+    "pages/user/cash/applyCash/applyCash",
+    "pages/user/cash/cash",
+    "pages/user/inforModify/inforModify",
+    "pages/user/inforModify/txPassword/txPassword",
+    "pages/user/inforModify/modifyPassword/modifyPassword",
+    "pages/user/cash/cashDetail/cashDetail",
+    "pages/user/inforModify/bankcard/bankcard",
+    "pages/user/inforModify/addbankcard/addbankcard",
+    "pages/user/mycard/mycard",
+    "pages/user/mycard/grand/grand",
+    "pages/user/otherRegister/otherRegister",
+    "pages/user/customerService/customerService",
+    "pages/user/help/help",
+    "pages/user/help/help_neiqian/help_neiqian"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#2c2b31",
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "首页"
+  },
+  "tabBar": {
+    "color": "#666",
+    "selectedColor": "#ED1B1A",
+    "borderStyle": "black",
+    "backgroundColor": "#fff",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "首页",
+        "iconPath": "images/tabbar/home.png",
+        "selectedIconPath": "images/tabbar/home_after.png"
+      },
+      {
+        "pagePath": "pages/question/question",
+        "text": "问题广场",
+        "iconPath": "images/tabbar/question.png",
+        "selectedIconPath": "images/tabbar/question_after.png"
+      },
+      {
+        "pagePath": "pages/news/news",
+        "text": "新闻中心",
+        "iconPath": "images/tabbar/news.png",
+        "selectedIconPath": "images/tabbar/news_after.png"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "text": "我的",
+        "iconPath": "images/tabbar/user.png",
+        "selectedIconPath": "images/tabbar/user_after.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

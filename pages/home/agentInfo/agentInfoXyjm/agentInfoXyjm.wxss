@@ -1,0 +1,2 @@
+/* pages/home/agentInfo/agentInfo.wxss */
+@import "/pages/home/directAgency/directAgencyXydl/directAgencyXydl.wxss";

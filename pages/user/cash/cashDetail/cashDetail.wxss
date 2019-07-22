@@ -1,0 +1,15 @@
+/* pages/user/cash/cashDetail/cashDetail.wxss */
+@import "/pages/home/finance/financeDetails/withdrawDetail/withdrawDetail.wxss";
+.item_box{
+  margin-top:16rpx;
+}
+.item_left{
+  font-size:28rpx;
+  color:#888;
+  text-align: justify; 
+  width:140rpx; 
+  height:70rpx;
+}
+.item_left text{
+  display: inline-block /* Opera */; padding-left: 100%; 
+}

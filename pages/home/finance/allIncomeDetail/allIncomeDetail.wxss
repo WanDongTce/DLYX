@@ -1,0 +1,2 @@
+/* pages/home/finance/allIncomeDetail/allIncomeDetail.wxss */
+@import "/pages/home/finance/financeDetails/withdrawDetail/withdrawDetail.wxss";

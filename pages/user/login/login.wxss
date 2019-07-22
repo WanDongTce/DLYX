@@ -1,0 +1,71 @@
+/* pages/user/login/login.wxss */
+page{
+  background-color:#fff;
+}
+.login_bg{width:100%;}
+.logo_box{top:200rpx;left:0;width:100%;text-align: center;}
+.login_logo{margin:0 auto;width:137rpx;border-radius:28rpx;}
+.logo_center{top:480rpx;left:0; padding:0 75rpx;z-index: 2;}
+.login_itembox{flex-wrap: nowrap;border-bottom:1rpx solid #cacaca; width:100%;height:80rpx;margin-top:25rpx;}
+.logo_centerimg{width:28rpx;height:41rpx;margin-left:2rpx;margin-top:20rpx;}
+.logo_centerimg2{width:28rpx;height:38rpx;margin-left:2rpx;margin-top:21rpx;}
+/* .login_input{width:100%;} */
+.item_bigbox{margin:0 75rpx;top:380rpx;}
+.overf{overflow: hidden;}
+.placeholder{font-size:30rpx;color:#bbb;}
+.login_input{font-size:30rpx;width:500rpx;margin-left:28rpx;height:100%;}
+
+
+.login_btn{color:#fff;line-height:80rpx;text-align: center;margin-top:68rpx;font-size:34rpx;border-radius: 8rpx;font-weight: bold;width:100%;
+    background: -webkit-linear-gradient(#f03e3c ,#f15c3c, #f1763b); 
+    background: -o-linear-gradient(#f03e3c ,#f15c3c, #f1763b); 
+    background: -moz-linear-gradient(#f03e3c ,#f15c3c, #f1763b);
+    background: linear-gradient(to right, #f03e3c ,#f15c3c, #f1763b);
+}
+.bottom_box{flex-wrap: nowrap;margin-top:30rpx;justify-content: space-between;}
+.forget,.register{font-size:28rpx;flex-grow:1;}
+.forget{color:#777;}
+.register{color:#4b94ee;text-align: right;}
+.login_linebox{width:100%;margin-top:168rpx;position:relative;height:30rpx;} 
+.login_or{text-align: center;font-size:24rpx;color:#999;line-height:30rpx;}
+.login_lineimg_l{width:152rpx;height:2rpx;position:absolute;left: 0rpx;top:14rpx;} 
+.login_lineimg_r{width:152rpx;height:2rpx;position:absolute;right: 0rpx;top:14rpx;} 
+
+
+.rlogin_bottom{
+  position:fixed;
+  bottom:106rpx;
+  font-size:26rpx;
+  width:100%;
+  text-align: center;
+  color:#777;
+}
+.rlogin_bottom text{
+  margin-left:10rpx;
+  color:#ED1B1A;
+}
+.rlogin_bottom_imgbox{
+  position:fixed;
+  bottom:14rpx;
+  width:100%;
+}
+.rlogin_bottom_img{ 
+  width:175rpx;
+  height:8rpx;
+  display: block;
+  margin:0 auto;
+}
+.new_bottom{
+    color:#323232;
+    font-size:26rpx;
+    line-height: 100rpx;
+}
+.new_bottomfixd{
+    position:fixed;
+    bottom:0;
+    width:100%;
+    color:#323232;
+    font-size:26rpx;
+    line-height: 80rpx;
+    text-align: center;
+}

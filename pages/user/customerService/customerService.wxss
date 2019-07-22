@@ -1,0 +1,15 @@
+/* pages/user/customerService/customerService.wxss */
+page{
+  background-color:#fff;
+}
+image{height:260rpx;width:100%;margin-top:16rpx;margin-bottom:30rpx;}
+.lx_view4{
+  font-size:30rpx;
+  color:#333;
+  line-height:46rpx;
+}
+.lx_view4 text{
+  color:#999;
+  margin-right:16rpx;
+  margin-left:24rpx;
+}

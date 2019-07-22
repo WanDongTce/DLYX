@@ -1,0 +1,58 @@
+<!--pages/user/user.wxml-->
+<image src='../../images/home/home/home_bg.png' class='r_user_bg' mode='aspectFill'></image>
+<image src='../../images/user/edit_fff.png' class='new_top_edit' bindtap='tz_loginAfter'></image>
+<view class='position_a r_user_top'>
+  <view class='user_topbox overf' bindtap='tz_loginAfter' >
+    <image wx:if="{{info.avatar==''}}" src='../../images/user/headPortrait.png' class='user_topimg fl'></image>
+    <image wx:else src='{{info.avatar}}' class='user_topimg fl'></image>
+    <view class='user_topcontent fl'>
+      <view class='r_user_top_text1'>{{info.realname}}</view>
+      <view class='user_topphone'><image src='../../images/user/r_phone.png'></image>{{info.mobile}}</view>
+    </view>
+    <view class='user_topagent fr'>{{info.agentlev_name}}</view> 
+  </view>
+</view>
+
+
+
+<view class='user_centerbox overf' bindtap='tz_cash'>
+  <image src='../../images/user/user_img4.png' class='user_img fl'></image>
+  <view class='fl user_content'>提现通知</view>
+  <image src='../../images/user/r_user_right.png' class='user_right fr user_right_mt2'></image>
+</view>
+<view class='user_centerbox overf' bindtap='tz_card'>
+  <image src='../../images/user/user_img7.png' class='user_img fl'></image>
+  <view class='fl user_content'>我的卡包</view>
+  <image src='../../images/user/r_user_right.png' class='user_right fr user_right_mt2'></image>
+</view>
+<view class='user_centerbox overf' bindtap='tz_member'>
+  <image src='../../images/user/user_img6.png' class='user_img fl'></image>
+  <view class='fl user_content'>我的会员</view>
+  <image src='../../images/user/r_user_right.png' class='user_right fr user_right_mt2'></image>
+</view>
+<view class='user_centerbox overf' bindtap='tz_otherRegister'>
+  <image src='../../images/user/user_img5.png' class='user_img fl'></image>
+  <view class='fl user_content'>学生推广</view>
+  <image src='../../images/user/r_user_right.png' class='user_right fr user_right_mt2'></image>
+</view>
+<!-- <view class='user_centerbox overf' bindtap='tz_dailiRegister'>
+  <image src='../../images/user/user_img1.png' class='user_img fl'></image>
+  <view class='fl user_content'>代理推广</view>
+  <image src='../../images/user/r_user_right.png' class='user_right fr user_right_mt2'></image>
+</view> -->
+<view class='user_centerbox overf' bindtap='tz_kefu'>
+  <image src='../../images/user/user_img2.png' class='user_img fl'></image>
+  <view class='fl user_content'>联系我们</view>
+  <image src='../../images/user/r_user_right.png' class='user_right fr user_right_mt2'></image>
+</view>
+<view class='user_centerbox overf' bindtap='tz_help'>
+  <image src='../../images/user/user_img3.png' class='user_img fl'></image>
+  <view class='fl user_content'>使用帮助</view>
+  <image src='../../images/user/r_user_right.png' class='user_right fr user_right_mt2'></image>
+</view>
+<view class='user_centerbox overf new_exit' bindtap='exitLogin'>
+  <image src='../../images/user/user_img8.png' class='user_img fl'></image>
+  <view class='fl user_content'>退出登录</view>
+  <!-- <image src='../../images/user/r_user_right.png' class='user_right fr user_right_mt2'></image> -->
+</view>
+<!-- <view class='user_btn' bindtap="exitLogin" >退出登录</view> -->

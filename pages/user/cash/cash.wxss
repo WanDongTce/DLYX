@@ -1,0 +1,75 @@
+/* pages/user/cash/cash.wxss */
+page{
+  background-color:#f4f4f4;
+}
+.top_box{
+  width:100%;
+  background-color:#fff;
+  margin-bottom:16rpx;
+  padding-bottom:40rpx;
+  padding-top:42rpx;
+}
+.top_text1{
+  
+  font-size:28rpx;
+  color:#333;
+  margin:0rpx 0 46rpx 24rpx;
+}
+.top_text2{
+  font-size:58rpx;
+  color:#ED1B1A;
+  margin-left:24rpx;
+  line-height:60rpx;
+}
+.top_text3{
+  font-size:30rpx;
+  color:#333;
+  margin-right:24rpx;
+  line-height:32rpx;
+  margin-top:28rpx;
+}
+.r_cashimg{
+  width:22rpx;
+  height:19rpx;
+  margin-left:8rpx;
+  vertical-align: middle;
+}
+.item_box{
+  background-color:#fff;
+  padding:32rpx 24rpx 0rpx;
+  
+}
+.item_box_b{
+  border-bottom:1rpx solid #dfdfdf;
+}
+.item_display{
+  justify-content: space-between;
+  align-items: center; 
+  margin-bottom:28rpx;
+}
+.item_display2{
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom:24rpx;
+}
+.item_text1{
+  font-size:30rpx;
+  color:#333;
+}
+.item_text2{
+  font-size:28rpx;
+  color:#999;
+  font-weight: bold;
+}
+.item_text3{
+  font-size:24rpx;
+  color:#999;
+}
+.item_text4{
+  font-size:24rpx;
+  color:#999;
+}
+.item_text5{
+  font-size:24rpx;
+  color:#ED1B1A;
+}

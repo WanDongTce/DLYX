@@ -1,0 +1,7 @@
+{
+    "navigationBarTitleText": "收银台",
+    "usingComponents": {
+        "passwordDialog": "/pages/component/passwordDialog/passwordDialog"
+
+    }
+}

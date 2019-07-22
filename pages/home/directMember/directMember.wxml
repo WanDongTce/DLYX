@@ -1,0 +1,83 @@
+<!--pages/home/directMember/directMember.wxml-->
+<view class='rsearch_box'>
+  <view class='rsearch_smbox overf'>
+    <view class='fl rsearch_imgbox'><image src='../../../../images/search_fff.png'></image></view>
+    <input class='rsearch_input' placeholder='搜索关键字' placeholder-class='placeholder' confirm-type='search' bindinput="keyword" bindconfirm="bindconfirm"></input>
+  </view> 
+</view>
+<view class='rtop_box overf position_fix_center'>
+  <view class='w25 fl' bindtap='sorttype' data-sorttype="{{sorttype}}">
+    <view class="rtop_text fl {{sorttype>0?'r_red_text':''}}">会员类型</view>
+    <view class='fr rtop_imgbox' wx:if="{{sorttype==0}}">      
+      <image src='../../../../images/sort_up.png' class='sort_img_up sort_img'></image>
+      <image src='../../../../images/sort_down.png' class='sort_img_down sort_img'></image>
+    </view>
+    <view class='fr rtop_imgbox' wx:if="{{sorttype%2==1}}">      
+      <image src='../../../../images/sort_up_c.png' class='sort_img_up sort_img'></image>
+      <image src='../../../../images/sort_down.png' class='sort_img_down sort_img'></image>
+    </view>
+    <view class='fr rtop_imgbox' wx:if="{{sorttype%2==0}}">      
+      <image src='../../../../images/sort_up.png' class='sort_img_up sort_img'></image>
+      <image src='../../../../images/sort_down_c.png' class='sort_img_down sort_img'></image>
+    </view>
+    <view class='clr'></view>
+  </view>
+  <view class='w25 fl' bindtap='sortdate' data-sortdate="{{sortdate}}">
+    <view class="rtop_text fl {{sortdate>0?'r_red_text':''}}">到期日期</view>
+    <view class='fr rtop_imgbox' wx:if="{{sortdate==0}}">      
+      <image src='../../../../images/sort_up.png' class='sort_img_up sort_img'></image>
+      <image src='../../../../images/sort_down.png' class='sort_img_down sort_img'></image>
+    </view>
+    <view class='fr rtop_imgbox' wx:if="{{sortdate%2==1}}">      
+      <image src='../../../../images/sort_up_c.png' class='sort_img_up sort_img'></image>
+      <image src='../../../../images/sort_down.png' class='sort_img_down sort_img'></image>
+    </view>
+    <view class='fr rtop_imgbox' wx:if="{{sortdate%2==0}}">      
+      <image src='../../../../images/sort_up.png' class='sort_img_up sort_img'></image>
+      <image src='../../../../images/sort_down_c.png' class='sort_img_down sort_img'></image>
+    </view>
+    <view class='clr'></view>
+  </view>
+  <view class='w25 fl' bindtap='sortname' data-sortname="{{sortname}}">
+    <view class="rtop_text fl {{sortname>0?'r_red_text':''}}" >会员姓名</view>
+    <view class='fr rtop_imgbox' wx:if="{{sortname==0}}">      
+      <image src='../../../../images/sort_up.png' class='sort_img_up sort_img'></image>
+      <image src='../../../../images/sort_down.png' class='sort_img_down sort_img'></image>
+    </view>
+    <view class='fr rtop_imgbox' wx:if="{{sortname%2==1}}">      
+      <image src='../../../../images/sort_up_c.png' class='sort_img_up sort_img'></image>
+      <image src='../../../../images/sort_down.png' class='sort_img_down sort_img'></image>
+    </view>
+    <view class='fr rtop_imgbox' wx:if="{{sortname%2==0}}">      
+      <image src='../../../../images/sort_up.png' class='sort_img_up sort_img'></image>
+      <image src='../../../../images/sort_down_c.png' class='sort_img_down sort_img'></image>
+    </view>
+    <view class='clr'></view>
+  </view>
+  <view class='w25 fl' bindtap='sortschool' data-sortagent="{{sortschool}}">
+    <view class="rtop_text fl {{sortschool>0?'r_red_text':''}}">所在学校</view>
+    <view class='fr rtop_imgbox' wx:if="{{sortschool==0}}">      
+      <image src='../../../../images/sort_up.png' class='sort_img_up sort_img'></image>
+      <image src='../../../../images/sort_down.png' class='sort_img_down sort_img'></image>
+    </view>
+    <view class='fr rtop_imgbox' wx:if="{{sortschool%2==1}}">      
+      <image src='../../../../images/sort_up_c.png' class='sort_img_up sort_img'></image>
+      <image src='../../../../images/sort_down.png' class='sort_img_down sort_img'></image>
+    </view>
+    <view class='fr rtop_imgbox' wx:if="{{sortschool%2==0}}">      
+      <image src='../../../../images/sort_up.png' class='sort_img_up sort_img'></image>
+      <image src='../../../../images/sort_down_c.png' class='sort_img_down sort_img'></image>
+    </view>
+    <view class='clr'></view>
+  </view>
+</view>
+<view class='fix_bottom'>
+  <block wx:for="{{list}}" wx:key>
+    <view class='ritem_box overf' bindtap='tz_memberdetails' data-studentid="{{item.id}}" data-agentname="{{item.agentname}}"> 
+      <view class='w25 text-align-center fl elip'>{{item.userlevel}}</view>
+      <view class='w25 text-align-center fl elip'>{{item.end_time}}</view>
+      <view class='w25 text-align-center fl elip'>{{item.realname}}</view>
+      <view class='w25 text-align-center fl elip'>{{item.schoolname}}</view>
+    </view>
+  </block>
+</view>

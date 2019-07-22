@@ -1,0 +1,46 @@
+/* pages/user/choice_step1/choice_step1.wxss */
+.box{
+    padding:130rpx 72rpx 130rpx;
+}
+.h1{
+    font-size:46rpx;
+    color:#333;
+    line-height: 46rpx;
+}
+.input_box{
+    border:1px solid #dfdfdf;
+    border-radius: 6rpx;
+    line-height: 88rpx;
+    font-size:32rpx;
+    height: 88rpx;
+}
+.placeholder{
+    font-size:32rpx;
+    color:#999;
+}
+.input{
+    color:#666;
+    line-height: 88rpx;
+    height: 88rpx;
+    padding-left:40rpx;
+    /* width:100%; */
+}
+.mt70{
+    margin-top:70rpx;
+}
+.btn{
+    background-color:#ED1B1A;
+    color:#fff;
+    width:100%;
+    line-height: 80rpx;
+    height: 80rpx;
+    border-radius: 6rpx;
+    text-align: center;
+    font-size:34rpx;
+}
+.tiaoguo{
+    text-align: right;
+    line-height: 170rpx;
+    font-size: 30rpx;
+    color:#666;
+}

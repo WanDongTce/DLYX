@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "问题广场",
+  "usingComponents": {
+    "fullImg": "/pages/component/fullImg/fullImg"
+  }
+}
