@@ -4,7 +4,7 @@
 
 
 <form bindsubmit="bindFormSubmit">
-   <view class='top_title'>中国教育工程A计划</view>
+   <view class='top_title'>中国教育工程学霸学</view>
 <view class='jzd'>代理端</view>   
 <view class='input_box mb36'>
   <input type="text" placeholder="请输入手机号" placeholder-class="placeClass" name="username"/>

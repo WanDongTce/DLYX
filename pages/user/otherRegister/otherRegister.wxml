@@ -4,14 +4,14 @@
     <image src='{{headerimg}}' class='headerimg fl'></image>
     <view class='fl'>
       <view class='newtext newtext1'>我是{{myname}}</view>
-      <view class='line'><view class='newtext newtext2'>邀请您加入<text>中国教育工程A计划</text></view></view>
+      <view class='line'><view class='newtext newtext2'>邀请您加入<text>中国教育工程学霸学</text></view></view>
     </view>
   </view>
 </view>
 
 <image src='../../../images/user/tuiguang.png' class='tgbanner'></image>
 <view class='slogan1'>利国利民的互联网共享教育</view>
-<view class='slogan2'>立即加入中国教育工程A计划</view>
+<view class='slogan2'>立即加入中国教育工程学霸学</view>
 <view class="container-box">
     <view class="img-box">
         <!-- <canvas bindtap="previewImg" hidden="{{canvasHidden}}" style="width: 686rpx;height: 686rpx;background:#f1f1f1;" canvas-id="mycanvas"/> -->

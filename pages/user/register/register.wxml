@@ -32,4 +32,4 @@
   <button class='login_btn' bindtap="loginBtnClick">立即注册</button>
 </view> 
 
-<view class='new_bottomfixd'>注册即代表阅读并同意<text class='c_gf' catchtap='agremt'>《A计划营销管理使用协议》</text></view>
+<view class='new_bottomfixd'>注册即代表阅读并同意<text class='c_gf' catchtap='agremt'>《学霸学营销管理使用协议》</text></view>
