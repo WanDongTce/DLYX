@@ -19,6 +19,7 @@ Page({
       }
     });
   },
+
   userNameInput: function (e) {
     this.setData({
       username: e.detail.value.replace(/^\s*|\s*$/, '')

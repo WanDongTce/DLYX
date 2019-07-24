@@ -23,6 +23,7 @@
 
 
 
+
 <image src='../../../images/login/train_login_bg.png' mode="widthFix" class='login_bg'></image>
 <view class='logo_box position-absolute'>
   <image src='../../../images/login/agent_login_logo.png' class='login_logo' mode="widthFix"></image>
