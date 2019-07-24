@@ -37,7 +37,9 @@ page{
   border-bottom:1rpx solid #dfdfdf;
 }
 .add_btn{
-  background-color:#e03c32;
+  background-image: -moz-linear-gradient( 0deg, rgb(24,223,247) 0%, rgb(38,155,254) 100%);
+  background-image: -webkit-linear-gradient( 0deg, rgb(24,223,247) 0%, rgb(38,155,254) 100%);
+  background-image: -ms-linear-gradient( 0deg, rgb(24,223,247) 0%, rgb(38,155,254) 100%);
   width:690rpx;
   margin:60rpx auto;
   color:#fff;

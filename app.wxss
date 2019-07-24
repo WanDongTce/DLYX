@@ -1087,7 +1087,7 @@ overflow: hidden;
 }
 
 .r_red_text{
-  color:#ED1B1A !important;
+  color:#2996f2 !important;
 }
 
 /*暂无数据  */
@@ -1120,4 +1120,4 @@ overflow: hidden;
 .c_777{color:#777;}
 .c_999{color:#999;}
 .c_fff{color:#fff;}
-.c_gf{color:#ed1b1a;}
+.c_gf{color:#2996F2;}

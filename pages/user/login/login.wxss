@@ -17,10 +17,9 @@ page{
 
 
 .login_btn{color:#fff;line-height:80rpx;text-align: center;margin-top:68rpx;font-size:34rpx;border-radius: 8rpx;font-weight: bold;width:100%;
-    background: -webkit-linear-gradient(#f03e3c ,#f15c3c, #f1763b); 
-    background: -o-linear-gradient(#f03e3c ,#f15c3c, #f1763b); 
-    background: -moz-linear-gradient(#f03e3c ,#f15c3c, #f1763b);
-    background: linear-gradient(to right, #f03e3c ,#f15c3c, #f1763b);
+    background-image: -moz-linear-gradient( 0deg, rgb(24,223,247) 0%, rgb(38,155,254) 100%);
+  background-image: -webkit-linear-gradient( 0deg, rgb(24,223,247) 0%, rgb(38,155,254) 100%);
+  background-image: -ms-linear-gradient( 0deg, rgb(24,223,247) 0%, rgb(38,155,254) 100%);
 }
 .bottom_box{flex-wrap: nowrap;margin-top:30rpx;justify-content: space-between;}
 .forget,.register{font-size:28rpx;flex-grow:1;}

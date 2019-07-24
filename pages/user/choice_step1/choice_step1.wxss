@@ -29,7 +29,7 @@
     margin-top:70rpx;
 }
 .btn{
-    background-color:#ED1B1A;
+    background-color:#2996F2;
     color:#fff;
     width:100%;
     line-height: 80rpx;

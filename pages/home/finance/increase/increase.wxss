@@ -11,7 +11,7 @@
  float:left;width:33.33%; background-color: #fff;text-align: center; font-size:30rpx; height:80rpx; line-height: 80rpx;color:#8D8D8D;
 } 
 .tab-left .active{ display: inline;
-   color:#ED1B1A; position:relative;
+   color:#2996F2; position:relative;
 } 
 .active2{border-bottom:4rpx solid #fff;display:inline-block;line-height: 80rpx;} 
 .tab-right .right-item{  

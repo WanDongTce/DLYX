@@ -14,12 +14,12 @@ page{background-color:#fff;}
 .newtext1{margin-top:15rpx;margin-left:36rpx;}
 .newtext2{margin-top:20rpx;margin-bottom:17rpx;}
 .newtext2 text{
-  color:#ED1B1A;
+  color:#2996F2;
 }
 .line{width:522rpx;margin-left:36rpx;}
 .tgbanner{display:block;width:700rpx;height:350rpx; text-align: center;margin:0 auto;margin-top:15rpx;}
 .slogan1{margin-top:26rpx; font-size:33rpx;color:#2e2e2e;text-align: center;font-weight: bold;}
-.slogan2{margin-top:17rpx; font-size:42rpx;color:#ED1B1A;text-align: center;font-weight: bold;margin-bottom:18rpx;}
+.slogan2{margin-top:17rpx; font-size:42rpx;color:#2996F2;text-align: center;font-weight: bold;margin-bottom:18rpx;}
 
 
 
