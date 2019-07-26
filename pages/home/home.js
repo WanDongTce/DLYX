@@ -37,20 +37,20 @@ Page({
     else{
 
     
-        if (app.userInfo.agentlev < 5) {
-        that.setData({
-            agentinfoshow: 1
-        })
-        if (app.userInfo.agentlev ==4 ) {
-            that.setData({
-            agentinfoshow_num: 4
-            })
-        }
+      if (app.userInfo.agentlev < 5 || app.userInfo.agentlev > 5) {
+          that.setData({
+              agentinfoshow: 1
+          })
+          if (app.userInfo.agentlev ==4  || app.userInfo.agentlev > 5) {
+              that.setData({
+                agentinfoshow_num: 4
+              })
+          }
         }
         else {
-        that.setData({
-            agentinfoshow: 2
-        })
+          that.setData({
+              agentinfoshow: 2
+          })
         }
         if (app.userInfo.agentlev == 5) {
         that.setData({

@@ -60,14 +60,14 @@
     </view>
   </block>
   <view wx:else></view>
-  <view class='overf ritem_box' bindtap='tz_directAgency'>
+  <!-- <view class='overf ritem_box' bindtap='tz_directAgency'>
     <image src='../../images/home/home/home_img2.png' class='rcenter_img fl'></image>
     <view class='fl'>
       <view class='rcenter_text1'>直属代理</view>
       <view class='rcenter_text2'>{{directinfo}}</view>
     </view>
     <image src='../../images/arrow_right_666.png' class='fr rcenter_arrow'></image>
-  </view>
+  </view> -->
   <view class='overf ritem_box border_n' bindtap='tz_directmember'>
     <image src='../../images/home/home/home_img3.png' class='rcenter_img fl'></image>
     <view class='fl'>
