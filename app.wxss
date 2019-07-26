@@ -1064,7 +1064,8 @@ overflow: hidden;
   line-height:76rpx;
   width:442rpx;
   margin:0 auto;
-  border-radius: 5rpx;
+  border-radius: 10rpx;
+  overflow: hidden
 }
 .sidebar_bottom_left{
   width:50%;

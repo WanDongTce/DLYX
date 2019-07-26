@@ -12,6 +12,12 @@ Page({
     
   },
   inputEvent: function (e) {
+    if (this.data.xfmc_show.length > e.detail.value.length) {
+      this.setData({
+        xfmc_show: e.detail.value
+      })
+      return;
+    }
     this.setData({
       xfmc_show: e.detail.value
     })
