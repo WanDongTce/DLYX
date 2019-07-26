@@ -73,12 +73,6 @@
         "selectedIconPath": "images/tabbar/home_after.png"
       },
       {
-        "pagePath": "pages/question/question",
-        "text": "问题广场",
-        "iconPath": "images/tabbar/question.png",
-        "selectedIconPath": "images/tabbar/question_after.png"
-      },
-      {
         "pagePath": "pages/news/news",
         "text": "新闻中心",
         "iconPath": "images/tabbar/news.png",
