@@ -64,7 +64,7 @@
 <view class="modify_box overf ssqy">
   <view class="fl modify_left">所属区域</view>
   <view class="fr modify_right qianse">
-    {{info.agentlev_name}}
+    {{info.area}}
   </view>
 </view>
 

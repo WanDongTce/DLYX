@@ -13,51 +13,18 @@ Page({
   },
   inputEvent: function (e) {
     this.setData({
-      xfmc_show: e.detail.value,
-      xfmc: e.detail.value
+      xfmc_show: e.detail.value
     })
-
-    //银行卡号格式
-    if (e.detail.value == "") { return };
-    var account = new String(e.detail.value);
-    account = account.substring(0, 22); /*帐号的总数, 包括空格在内 */
-    if (account.match(".[0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9]{7}") == null) {
-      /* 对照格式 */
-      if (account.match(".[0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9]{7}|" + ".[0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9]{7}|" +
-        ".[0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9]{7}|" + ".[0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9]{7}") == null) {
-        var accountChar;
-        var accountNumeric = accountChar = "", i;
-        for (i = 0; i < account.length; i++) {
-          accountChar = account.substr(i, 1);
-          if (!isNaN(accountChar) && (accountChar != " ")) accountNumeric = accountNumeric + accountChar;
-        }
-        account = "";
-        this.setData({
-          xfmc_show: account
-        })
-        for (i = 0; i < accountNumeric.length; i++) {    /* 可将以下空格改为-,效果也不错 */
-          if (i == 4) account = account + " "; /* 帐号第四位数后加空格 */
-          if (i == 8) account = account + " "; /* 帐号第八位数后加空格 */
-          if (i == 12) account = account + " ";/* 帐号第十二位后数后加空格 */
-          account = account + accountNumeric.substr(i, 1)
-          this.setData({
-            xfmc_show: account
-          })
-        }
-      }
+    if (e.detail.value=='') return;
+    var xfmc_show = this.data.xfmc_show;
+    var xfmc = xfmc_show.replace(/\s*/g, "");
+    if (xfmc.length% 4 == 0) {
+      xfmc_show += " ";
     }
-    else {
-      account = " " + account.substring(1, 5) + " " + account.substring(6, 10) + " " + account.substring(14, 18) + "-" + account.substring(18, 25);
-      this.setData({
-        xfmc_show: account
-      })
-    }
-    if (account != e.detail.value) {
-      e.detail.value = account;
-      this.setData({
-        xfmc_show: account
-      })
-    }
+    xfmc_show = xfmc_show.substring(0, 23);
+    this.setData({
+      xfmc_show: xfmc_show
+    })
   },
   inputName:function(e){
     this.setData({

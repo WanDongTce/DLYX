@@ -150,6 +150,7 @@ Page({
                 // console.log(res2)
                 var obj = res2.data;                
                 obj.is_paypwd = 1;
+                app.userInfo.is_paypwd = 1;
                 wx.setStorage({
                   key: 'userInfo',
                   data: obj,
