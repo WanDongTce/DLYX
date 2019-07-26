@@ -41,7 +41,7 @@
 
   <button class='login_btn' bindtap="loginBtnClick">登录</button>
   <view class='display-flex justify-content-between new_bottom'>
-    <navigator url='/pages/user/register/register'>注册</navigator>
+    <!-- <navigator url='/pages/user/register/register'>注册</navigator> -->
     <view bindtap='tz_forget'>忘记密码？</view>
   </view>
 </view> 
