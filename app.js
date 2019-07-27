@@ -17,7 +17,7 @@ var currentdate2 = date.getFullYear() + seperator1 + month;
 
 App({
   requestUrl: 'http://social.test.54xuebaxue.com/',
-  // requestUrl: 'http://social.54xuebaxue.com/',
+  // requestUrl: 'https://social.54xuebaxue.com/',
   app_source_type: 3,
   currentdate: currentdate,
   currentdate2: currentdate2,
