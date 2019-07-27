@@ -1,6 +1,7 @@
 // pages/user/inforModify/addbankcard/addbankcard.js
 var network = require("../../../../utils/network.js")
 var app = getApp();
+var timer = null;
 Page({
   data: {
     xfmc_show: '',
@@ -12,25 +13,40 @@ Page({
     
   },
   inputEvent: function (e) {
-    if (this.data.xfmc_show.length > e.detail.value.length) {
-      this.setData({
-        xfmc_show: e.detail.value
-      })
-      return;
-    }
-    this.setData({
-      xfmc_show: e.detail.value
-    })
-    if (e.detail.value=='') return;
-    var xfmc_show = this.data.xfmc_show;
-    var xfmc = xfmc_show.replace(/\s*/g, "");
-    if (xfmc.length% 4 == 0) {
-      xfmc_show += " ";
-    }
-    xfmc_show = xfmc_show.substring(0, 23);
-    this.setData({
-      xfmc_show: xfmc_show
-    })
+    var that = this;
+    var str = e.detail.value;
+
+    clearTimeout(timer);
+    timer = setTimeout(function () {
+      //添加
+      if (e.detail.value.length > that.data.xfmc_show.length) {
+        str = str.replace(/\s*/g, "").replace(/(.{4})/g, "$1 ");
+      } else {  //删除
+        str = str.replace(/\s$/g, "");
+      }
+      that.setData({
+        xfmc_show: str
+      });
+    }, 300);
+    // if (this.data.xfmc_show.length > e.detail.value.length) {
+    //   this.setData({
+    //     xfmc_show: e.detail.value
+    //   })
+    //   return;
+    // }
+    // this.setData({
+    //   xfmc_show: e.detail.value
+    // })
+    // if (e.detail.value=='') return;
+    // var xfmc_show = this.data.xfmc_show;
+    // var xfmc = xfmc_show.replace(/\s*/g, "");
+    // if (xfmc.length% 4 == 0) {
+    //   xfmc_show += " ";
+    // }
+    // xfmc_show = xfmc_show.substring(0, 23);
+    // this.setData({
+    //   xfmc_show: xfmc_show
+    // })
   },
   inputName:function(e){
     this.setData({
