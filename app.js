@@ -57,7 +57,7 @@ App({
   },
   userData: {
    
-    uploadURL: 'https://stu.pp11.cn/agents/user/updateheaderimg',//修改头像地址
+    uploadURL: '',//修改头像地址
     
 
     //helpDetail:
