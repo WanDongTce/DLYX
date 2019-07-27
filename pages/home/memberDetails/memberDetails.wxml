@@ -69,7 +69,7 @@
       <view class='member_xinxi_text1'>家长注册时间</view>
       <view class='member_xinxi_text2'>{{list.parent_ctime}}</view>
     </view>
-    <view class='member_xinxi_fakabox'><view class='member_xinxi_faka' bindtap='faka'>给TA发卡</view></view>
+    <!-- <view class='member_xinxi_fakabox'><view class='member_xinxi_faka' bindtap='faka'>给TA发卡</view></view> -->
   </view> 
   <view class="right-item {{tabArr.curBdIndex=='1'? 'active' : ''}}">
     <block wx:for="{{listQuestion}}" wx:key="this">
