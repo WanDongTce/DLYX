@@ -56,7 +56,7 @@
               <text class='cardbox_top_text1'>卡号：{{item.card}}</text>
               <text class='cardbox_top_text2 cardbox_red'>已使用</text>
             </view>
-            <view class='card_money'>199元</view>
+            <view class='card_money'>{{item.type}}</view>
           </view>
            <view class='card_info'>使用日期：{{item.use_time}}</view> 
            <view class='card_info'>使用信息：{{item.school}}</view> 
@@ -71,7 +71,7 @@
               <text class='cardbox_top_text1'>卡号：{{item.card}}</text>
               <text class='cardbox_top_text2 cardbox_orange'>未使用</text>
             </view>
-            <view class='card_money'>199元</view>
+            <view class='card_money'>{{item.type}}</view>
           </view>
           <view class='card_info'>使用日期：{{item.use_time}}</view>
           <view class='card_info'>使用信息：{{item.school}}</view> 
