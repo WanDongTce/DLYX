@@ -36,7 +36,7 @@
               <text class='cardbox_top_text1'>卡号：{{item.card}}</text>
               <text class='cardbox_top_text2 cardbox_green'>未发放</text>
             </view>
-            <view class='card_money'>199元</view>
+            <view class='card_money'>{{item.type}}</view>
           </view>
           <view class='cardbox_bottom'>
             <view class='cardbox_xlh'>序列号：{{item.sequence}}</view>
