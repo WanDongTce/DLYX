@@ -11,7 +11,7 @@
 </view>
 <view class='lx_view3'>联系邮箱：ajihua@pp11.cn</view> -->
 <view class='lx_view4' bindtap='kf_view1'>
-  <text>●</text>客服热线：024-66909606
+  <text>●</text>客服热线：024-31871935
 </view>
 <!-- <view class='lx_view4' bindtap='kf_view2'>
   <text>●</text>联系电话：024-75168888
