@@ -169,7 +169,7 @@ Page({
   getListMore: function (typenum, flag, page){
     var that = this;
     network.POST({
-      url: "tuiguangka/listnew",
+      url: "v15/card-bag/card-list",
       params: {        
         "mobile": app.userInfo.mobile,
         "token": app.userInfo.token,
