@@ -27,7 +27,7 @@ App({
 
   },
   toLogin: function () {
-    wx.navigateTo({
+    wx.reLaunch({
       url: '/pages/user/login/login'
     });
   },

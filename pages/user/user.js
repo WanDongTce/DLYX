@@ -95,7 +95,7 @@ Page({
     //   dailitypeStr: '',
     //   userheaderimg: '../../images/user/headPortrait.png',
     // })
-    wx: wx.navigateTo({
+    wx: wx.reLaunch({
       url: '/pages/user/login/login',
     })
   },

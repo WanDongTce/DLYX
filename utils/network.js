@@ -43,7 +43,7 @@ function requesttools(method, requestHandler) {
             icon: 'loading',
             duration: 1000
             });
-            wx.navigateTo({
+          wx.reLaunch({
             url: '/pages/user/login/login'
             });           
         }         
